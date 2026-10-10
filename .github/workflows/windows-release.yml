@@ -1,5 +1,11 @@
-name: Instalação Windows da versão publicada
+name: Instalação Windows e primeiro arranque
 on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/windows-release.yml
+      - scripts/test-installed-windows.ps1
+      - tests/windows-installed.mjs
   release:
     types: [published]
   workflow_dispatch:
@@ -13,7 +19,7 @@ permissions:
 jobs:
   install:
     runs-on: windows-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     env:
       NEXO_RELEASE_TAG: ${{ github.event.release.tag_name || inputs.tag }}
     steps:
@@ -23,7 +29,17 @@ jobs:
           node-version: '24.21.0'
           cache: npm
       - run: npm ci
+      - name: Compilar distribuição em máquina nova
+        if: github.event_name != 'release'
+        shell: pwsh
+        run: |
+          ./scripts/build-desktop.ps1
+          $testRoot = Join-Path $env:RUNNER_TEMP 'nexo-release-validation'
+          New-Item -ItemType Directory -Path $testRoot -Force | Out-Null
+          $setup = Get-ChildItem -LiteralPath src-tauri/target/release/bundle/nsis -Filter '*-setup.exe' | Select-Object -First 1
+          Copy-Item -LiteralPath $setup.FullName -Destination (Join-Path $testRoot 'setup.exe')
       - name: Verificar assinatura e obter instalador
+        if: github.event_name == 'release'
         run: node --use-system-ca scripts/fetch-release-test.mjs
       - name: Instalar e validar primeiro arranque
         shell: pwsh
