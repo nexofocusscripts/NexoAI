@@ -83,8 +83,13 @@ async fn save_project_zip(id:String,state:State<'_,Backend>)->Result<bool,String
  if let Some(file)=selected{file.write(&bytes).await.map_err(|_|"Não foi possível guardar o ZIP.".to_string())?;return Ok(true)}Ok(false)
 }
 
+#[tauri::command]
+fn open_release_page()->Result<(),String>{
+ #[cfg(windows)] {Command::new("explorer.exe").arg("https://github.com/nexofocusscripts/NexoAI/releases/latest").creation_flags(0x08000000).spawn().map_err(|_|"Não foi possível abrir a página oficial.".to_string())?;Ok(())}
+ #[cfg(not(windows))] {Err("Esta distribuição destina-se ao Windows.".to_string())}
+}
 fn main() {
-    let app=tauri::Builder::default().plugin(tauri_plugin_single_instance::init(|app,_,_|{if let Some(window)=app.get_webview_window("main"){let _=window.show();let _=window.set_focus();}})).invoke_handler(tauri::generate_handler![api,save_file,save_project_zip,choose_update,apply_update]).setup(|app| {
+    let app=tauri::Builder::default().plugin(tauri_plugin_single_instance::init(|app,_,_|{if let Some(window)=app.get_webview_window("main"){let _=window.show();let _=window.set_focus();}})).invoke_handler(tauri::generate_handler![api,save_file,save_project_zip,open_release_page,choose_update,apply_update]).setup(|app| {
         let resource=app.path().resource_dir()?;
         let backend=resource.join("backend");
         let data=app.path().app_local_data_dir()?;

@@ -10,13 +10,13 @@ export function verifyManifest(envelope,key){
  if(manifest.product!=='NexoAI'||!/^\d+\.\d+\.\d+$/.test(manifest.version)||manifest.dataSchema!==1||manifest.file!=='setup.exe'||! /^[a-f0-9]{64}$/.test(manifest.sha256)||!Number.isInteger(manifest.bytes)||manifest.bytes<1||manifest.bytes>100000000)throw Error('Manifesto de atualização inválido ou incompatível.');
  return manifest;
 }
-export async function checkUpdate(settings,current){
+export async function checkUpdate(settings,current,{fetcher=fetch,publicKey}={}){
  const url=settings.updates?.manifestUrl;if(!url)return {configured:false,current};
  if(!settings.onlineMode)throw Error('Ativa o modo online para consultar atualizações.');
  if(new URL(url).protocol!=='https:')throw Error('Atualizações exigem HTTPS.');
- const response=await fetch(url,{redirect:'error',headers:{accept:'application/json'},signal:AbortSignal.timeout(15000)});if(!response.ok)throw Error(`Atualizações HTTP ${response.status}`);
- const text=await response.text();if(text.length>30000)throw Error('Manifesto demasiado grande.');
- const manifest=verifyManifest(JSON.parse(text),await fs.readFile(publicKeyFile));
+ const response=await fetcher(url,{redirect:'error',headers:{accept:'application/json','user-agent':'NexoAI-Updater'},signal:AbortSignal.timeout(15000)});if(response.status===404)return {configured:false,current,available:false,reason:'O canal oficial ainda não foi publicado.'};if(!response.ok)throw Error(`Atualizações HTTP ${response.status}`);
+ const chunks=[];let count=0;for await(const chunk of response.body){count+=chunk.length;if(count>30000)throw Error('Manifesto demasiado grande.');chunks.push(chunk)}const text=Buffer.concat(chunks).toString('utf8');
+ const manifest=verifyManifest(JSON.parse(text),publicKey||await fs.readFile(publicKeyFile));
  return {configured:true,current,latest:manifest.version,available:compare(manifest.version,current)>0,notes:String(manifest.notes||''),packageUrl:manifest.packageUrl||'',signatureVerified:true};
 }
 function compare(a,b){const A=a.split('.').map(Number),B=b.split('.').map(Number);for(let i=0;i<3;i++)if(A[i]!==B[i])return A[i]-B[i];return 0}

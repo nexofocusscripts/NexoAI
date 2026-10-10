@@ -6,6 +6,9 @@ on:
       - .github/workflows/windows-release.yml
       - scripts/test-installed-windows.ps1
       - tests/windows-installed.mjs
+      - src-tauri/tauri.conf.json
+      - scripts/build-desktop.ps1
+      - scripts/prepare-build-directory.ps1
   release:
     types: [published]
   workflow_dispatch:
@@ -13,7 +16,7 @@ on:
       tag:
         description: Versão pública a testar
         required: true
-        default: v1.0.4
+        default: v1.0.5
 permissions:
   contents: read
 jobs:

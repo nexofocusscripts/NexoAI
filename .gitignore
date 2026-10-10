@@ -22,3 +22,4 @@ backups/
 Thumbs.db
 
 tests/artifacts/
+.nexo-build/

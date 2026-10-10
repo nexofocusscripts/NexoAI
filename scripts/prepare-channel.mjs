@@ -1,0 +1,17 @@
+import fs from 'node:fs/promises';import path from 'node:path';import crypto from 'node:crypto';import {fileURLToPath} from 'node:url';
+import {unzipSync} from 'fflate';import {verifyManifest} from '../src/modules/updater.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const [file,keyPath,output]=process.argv.slice(2);
+if(!file||!keyPath||!output)throw Error('Indica pacote .nexoupdate, chave privada fora do repositório e destino do manifesto.');
+if(path.resolve(keyPath).startsWith(root+path.sep))throw Error('A chave privada deve ficar fora do repositório.');
+const publicKey=crypto.createPublicKey(await fs.readFile(path.join(root,'config/update-public.pem'))),privateKey=crypto.createPrivateKey(await fs.readFile(keyPath));
+if(privateKey.asymmetricKeyType!=='ed25519'||!crypto.createPublicKey(privateKey).export({type:'spki',format:'der'}).equals(publicKey.export({type:'spki',format:'der'})))throw Error('A chave não corresponde ao editor de atualizações do Nexo AI.');
+const bytes=await fs.readFile(file);if(bytes.length>110000000)throw Error('Pacote demasiado grande.');
+let count=0;const archive=unzipSync(bytes,{filter:entry=>{if(++count>2||!['manifest.json','setup.exe'].includes(entry.name)||entry.originalSize>(entry.name==='manifest.json'?30000:100000000))throw Error('Entrada inválida.');return true}});
+const manifest=verifyManifest(JSON.parse(Buffer.from(archive['manifest.json']).toString()),publicKey);
+if(archive['setup.exe'].length!==manifest.bytes||crypto.createHash('sha256').update(archive['setup.exe']).digest('hex')!==manifest.sha256)throw Error('Instalador não corresponde à assinatura.');
+const name=`Atualizacao-Nexo-AI-${manifest.version}.nexoupdate`;
+const payload=JSON.stringify({...manifest,packageUrl:`https://github.com/nexofocusscripts/NexoAI/releases/download/v${manifest.version}/${name}`,packageBytes:bytes.length,packageSha256:crypto.createHash('sha256').update(bytes).digest('hex'),notes:'Atualização Windows. Revê as notas e limitações na página oficial antes de instalar.'});
+const envelope={payload,signature:crypto.sign(null,Buffer.from(payload),privateKey).toString('base64')};verifyManifest(envelope,publicKey);
+await fs.mkdir(path.dirname(path.resolve(output)),{recursive:true});await fs.writeFile(output,JSON.stringify(envelope,null,2)+'\n');
+console.log(JSON.stringify({version:manifest.version,signatureVerified:true,publicationPerformed:false}));

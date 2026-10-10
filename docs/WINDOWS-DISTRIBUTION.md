@@ -22,3 +22,13 @@ Referências:
 - https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/code-signing-options
 - https://v2.tauri.app/distribute/sign/windows/
 - https://www.microsoft.com/en-us/wdsi/filesubmission
+
+## Processo de assinatura preparado
+
+O mantenedor pode usar scripts/build-signed-windows.ps1 com a impressão digital de um certificado de código instalado no Windows e o servidor HTTPS de carimbo de tempo indicado pelo emissor. O script recusa certificados ausentes, expirados ou sem cadeia reconhecida, assina os auxiliares, deixa o Node oficial com a assinatura do respetivo editor e exige assinaturas válidas da aplicação e instalador. Não exporta a chave nem guarda palavras-passe. O percurso real de assinatura exige um certificado adequado; nesta máquina só foi verificada a recusa segura quando não existe certificado.
+
+## Canal de versões
+
+Em Definições, ativa Modo online e escolhe Consultar versões online. O pedido exato é apresentado antes da consulta; cancelamento, alterações da configuração e autorizações expiradas impedem o envio. O manifesto tem assinatura Ed25519 e tamanho limitado. A página oficial de downloads abre apenas por ação do utilizador. Depois seleciona o pacote .nexoupdate para rever e instalar, mantendo a recuperação da versão anterior.
+
+O mantenedor prepara o manifesto com scripts/prepare-channel.mjs, mantendo a chave privada fora do repositório. O manifesto só deve ser publicado em updates/stable.json depois de os respetivos ficheiros públicos estarem disponíveis. A publicação do instalador depende de autorização; código publicado não significa que já exista uma versão para descarregar.
