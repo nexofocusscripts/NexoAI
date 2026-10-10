@@ -17,6 +17,13 @@ $env:WEBVIEW2_USER_DATA_FOLDER=Join-Path $testRoot 'webview-data'
 $env:RUST_BACKTRACE='1'
 $env:NEXO_TEST_CDP_PORT="$port"
 $env:NEXO_TEST_RESULTS=$testRoot
+# WebView2 150+ ignores environment overrides in an elevated CI runner.
+# Scope the documented machine policy to this app, only on the disposable runner.
+$policy='HKLM:\SOFTWARE\Policies\Microsoft\Edge\WebView2\AdditionalBrowserArguments'
+$policyName='nexo-ai.exe'
+$oldPolicy=Get-ItemPropertyValue -LiteralPath $policy -Name $policyName -ErrorAction SilentlyContinue
+New-Item -Path $policy -Force | Out-Null
+New-ItemProperty -LiteralPath $policy -Name $policyName -Value $env:WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS -PropertyType String -Force | Out-Null
 $app=Start-Process -FilePath $exe -PassThru -WindowStyle Hidden -RedirectStandardOutput (Join-Path $testRoot 'app-stdout.txt') -RedirectStandardError (Join-Path $testRoot 'app-stderr.txt')
 @{installer=$setupProcess.ExitCode;startMenuShortcut=$true;webViewPresentBeforeInstall=$webViewPresent;version=(Get-Item -LiteralPath $exe).VersionInfo.ProductVersion;processId=$app.Id;cdpPort=$port} | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $testRoot 'installation.json')
 try{
@@ -24,6 +31,7 @@ try{
     if($LASTEXITCODE -ne 0){throw 'Primeiro arranque desktop falhou.'}
     @{installer=$setupProcess.ExitCode;startMenuShortcut=$true;webViewPresentBeforeInstall=$webViewPresent;version=(Get-Item -LiteralPath $exe).VersionInfo.ProductVersion} | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $testRoot 'installation.json')
 }finally{
+    if($null -eq $oldPolicy){Remove-ItemProperty -LiteralPath $policy -Name $policyName -ErrorAction SilentlyContinue}else{Set-ItemProperty -LiteralPath $policy -Name $policyName -Value $oldPolicy}
     $app.Refresh()
     @{exitedBeforeCleanup=$app.HasExited;exitCode=if($app.HasExited){$app.ExitCode}else{$null};webViewProcesses=@(Get-Process -Name msedgewebview2 -ErrorAction SilentlyContinue | Select-Object Id,SessionId)} | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath (Join-Path $testRoot 'process.json')
     $serviceLog=Join-Path $env:LOCALAPPDATA 'pt.nexoai.desktop\service.log'
