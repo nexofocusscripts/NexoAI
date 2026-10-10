@@ -1,0 +1,2 @@
+export function externalPreview({provider,prompt,files=[]}){return{provider,warning:'Estes dados sairiam do computador apenas após autorização explícita.',promptPreview:String(prompt||'').slice(0,2000),files:files.map(x=>({path:x.path,size:x.size??null})),requiresConsent:true}}
+export function assertOnline(settings){if(!settings.onlineMode)throw new Error('Modo online desativado. Ativa-o nas Definições.');}

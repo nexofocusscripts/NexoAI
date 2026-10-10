@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Nexo AI",
+  "version": "1.0.3",
+  "identifier": "pt.nexoai.desktop",
+  "build": {
+    "beforeBuildCommand": "npm run ui:build",
+    "beforeDevCommand": "npm run ui:dev",
+    "devUrl": "http://localhost:1420",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Nexo AI",
+        "width": 1280,
+        "height": 850,
+        "minWidth": 920,
+        "minHeight": 640
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' ipc: http://ipc.localhost; object-src 'none'; frame-src 'none'; base-uri 'self'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "nsis"
+    ],
+    "resources": {
+      "resources/node.exe": "backend/node.exe",
+      "resources/nexo-sandbox.exe": "backend/nexo-sandbox.exe",
+      "resources/nexo-vault.exe": "backend/nexo-vault.exe",
+      "resources/nexo-signature.exe": "backend/nexo-signature.exe",
+      "../src/": "backend/src/",
+      "../config/": "backend/config/",
+      "../public/": "backend/public/",
+      "../node_modules/fflate/": "backend/node_modules/fflate/",
+      "resources/nexo-updater.exe": "backend/nexo-updater.exe"
+    },
+    "windows": {
+      "webviewInstallMode": {
+        "type": "embedBootstrapper"
+      },
+      "nsis": {
+        "installMode": "currentUser",
+        "displayLanguageSelector": false,
+        "languages": [
+          "Portuguese",
+          "English"
+        ]
+      }
+    },
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.ico"
+    ]
+  }
+}

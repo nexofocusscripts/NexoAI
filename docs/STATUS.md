@@ -1,0 +1,7 @@
+# Nexo AI — estado funcional
+
+Versão 1.0.3: desktop Tauri/React com instalador gráfico NSIS, primeiro arranque, inventário Windows real, Ollama, gestão de modelos, comparação e escolha automática/manual, projetos/chats isolados, ficheiros, agente iterativo autorizado, AppContainer para testes Node, cofre Windows, memória semântica e promoção por evidência, documentos/PDF, visão, geração local de imagens, providers opcionais com consentimento exato, diagnóstico, auditoria, backups e atualização local assinada com recuperação. Temas claro/escuro/sistema persistentes e interface inspirada no NexoX, com símbolo hexagonal e painéis luminosos laranja/amarelo/roxo.
+
+51 testes automatizados passaram em Windows, incluindo sandbox, credenciais e integração. O fluxo da interface foi testado com Edge invisível e runtime simulado: onboarding, documentos, isolamento, ficheiros, escolhas de modelos, temas e persistência. Isso não é validação de modelos reais nem de instalação numa máquina limpa nesta versão.
+
+Limites: sem certificado Authenticode, canal público de atualização, instalação Windows limpa ou cobertura de todas as GPUs. Testes autónomos limitados a Node. Entrega automática de um projeto revisto em ZIP ainda não implementada. Sondas de modelos não demonstram equivalência a serviços comerciais. Publicação GitHub pendente de acesso de escrita; os workflows não foram executados no GitHub.

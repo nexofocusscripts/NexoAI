@@ -1,0 +1,2 @@
+import path from 'node:path';import crypto from 'node:crypto';import {appendJson,readJson} from './store.mjs';
+export function auditService(data){let file=path.join(data,'audit','events.json');return{async log(type,details={}){let e={id:crypto.randomUUID(),at:new Date().toISOString(),type,...details};await appendJson(file,e,2000);return e},async list(limit=200){return (await readJson(file,[])).slice(-limit).reverse()}}}

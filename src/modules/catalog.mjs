@@ -1,0 +1,3 @@
+export const capabilities={code:['qwen3-coder:30b','qwen2.5-coder:14b'],general:['qwen3:14b','qwen3:8b','llama3.1:8b'],documents:['qwen3:14b','qwen3:8b'],image:['qwen2.5vl:7b']};
+export function scoreModel(name,task,hw={}){let n=name.toLowerCase(),s=0;if(task==='code'&&/coder/.test(n))s+=50;if(task==='image'&&/(vl|vision)/.test(n))s+=50;if(task==='general'&&!/coder/.test(n))s+=10;if(/30b/.test(n))s+=(hw.ramGb||0)>=32?18:-20;if(/14b/.test(n))s+=(hw.ramGb||0)>=24?14:2;if(/7b|8b/.test(n))s+=8;return s}
+export function recommendInstalled(models,task,hw){return [...models].sort((a,b)=>scoreModel(b.name,task,hw)-scoreModel(a.name,task,hw))[0]?.name||null}

@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "code": ["qwen3-coder:30b","qwen2.5-coder:14b"],
+    "general": ["qwen3:8b","qwen3-coder:30b","qwen2.5-coder:14b"],
+    "documents": ["qwen3:8b","qwen3-coder:30b"],
+    "image": []
+  },
+  "recommendedInstalls": {
+    "code":"qwen3-coder:30b","general":"qwen3:8b","documents":"qwen3:8b"
+  }
+}

@@ -1,0 +1,6 @@
+import path from 'node:path';
+export const safeName=s=>{const n=String(s||'').trim().replace(/[^\p{L}\p{N}._ -]/gu,'_').slice(0,80).replace(/[. ]+$/u,'');if(!n||n==='.'||n==='..'||/^(con|prn|aux|nul|com[1-9]|lpt[1-9])(?:\.|$)/i.test(n))throw Error('Nome de projeto inválido.');return n};
+export function inside(root,rel='.') { if(typeof rel!=='string'||path.isAbsolute(rel)||/[\x00-\x1f:]/.test(rel)||rel.includes('\\'))throw Error('Caminho inválido.');const p=path.resolve(root,rel); const r=path.resolve(root); if(p!==r&&!p.startsWith(r+path.sep)) throw new Error('Caminho fora do projeto bloqueado.'); return p; }
+export function classify(text=''){const s=text.toLowerCase();if(/fivem|lua|qbcore|vrp|script|c[oó]digo|program|website|typescript|javascript|python|app/.test(s))return'code';if(/imagem|image|foto|desenha|logo/.test(s))return'image';if(/document|pdf|word|relat[oó]rio/.test(s))return'documents';return'general'}
+export function parseAgentPlan(text=''){const m=text.match(/<nexo_actions>([\s\S]*?)<\/nexo_actions>/i);if(!m)return[];try{const a=JSON.parse(m[1]);return Array.isArray(a)?a:[]}catch{return[]}}
+export function stripAgentPlan(text=''){return text.replace(/<nexo_actions>[\s\S]*?<\/nexo_actions>/gi,'').trim()}

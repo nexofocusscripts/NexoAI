@@ -1,0 +1,6 @@
+import fs from 'node:fs/promises';import path from 'node:path';import crypto from 'node:crypto';
+const queues=new Map();
+export async function readJson(file,fallback){try{return JSON.parse(await fs.readFile(file,'utf8'))}catch(error){if(error.code==='ENOENT')return structuredClone(fallback);throw Error('Dados persistentes inválidos ou inacessíveis. Preserva os ficheiros e usa a recuperação.')}}
+export async function writeJson(file,data){await fs.mkdir(path.dirname(file),{recursive:true});const tmp=file+'.'+crypto.randomUUID()+'.tmp';try{await fs.writeFile(tmp,JSON.stringify(data,null,2),'utf8');for(let attempt=0;;attempt++){try{await fs.rename(tmp,file);break}catch(error){if(!['EPERM','EBUSY','EACCES'].includes(error.code)||attempt>=9)throw error;await new Promise(resolve=>setTimeout(resolve,Math.min(20*(attempt+1),150)))}}}finally{await fs.rm(tmp,{force:true})}return data}
+export function transactionJson(file,fallback,update){const next=(queues.get(file)||Promise.resolve()).then(async()=>{const current=await readJson(file,fallback),data=await update(current);return writeJson(file,data)});queues.set(file,next.catch(()=>{}));return next}
+export async function appendJson(file,item,limit=1000){return transactionJson(file,[],a=>[...a,item].slice(-limit))}
