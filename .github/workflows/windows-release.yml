@@ -1,0 +1,42 @@
+name: Instalação Windows da versão publicada
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Versão pública a testar
+        required: true
+        default: v1.0.4
+permissions:
+  contents: read
+jobs:
+  install:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    env:
+      NEXO_RELEASE_TAG: ${{ github.event.release.tag_name || inputs.tag }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: '24.21.0'
+          cache: npm
+      - run: npm ci
+      - name: Verificar assinatura e obter instalador
+        run: node --use-system-ca scripts/fetch-release-test.mjs
+      - name: Instalar e validar primeiro arranque
+        shell: pwsh
+        run: ./scripts/test-installed-windows.ps1
+      - name: Guardar resultados e capturas
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: windows-installation-results
+          path: ${{ runner.temp }}/nexo-release-validation/*.json
+      - name: Guardar capturas
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: windows-installation-screenshots
+          path: ${{ runner.temp }}/nexo-release-validation/*.png
