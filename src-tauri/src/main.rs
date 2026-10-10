@@ -71,8 +71,20 @@ async fn api(route: String, method: String, body: Option<Value>, state: State<'_
     Ok(value)
 }
 
+#[tauri::command]
+async fn save_project_zip(id:String,state:State<'_,Backend>)->Result<bool,String>{
+ if id.len()!=36||!id.bytes().all(|b|b.is_ascii_hexdigit()||b==b'-'){return Err("Entrega inválida.".into());}
+ let response=state.client.get(format!("http://127.0.0.1:{}/api/agent/delivery/export?id={}",state.port,id)).header("X-Nexo-Token",&state.token).send().await.map_err(|_|"Entrega local indisponível.".to_string())?;
+ if !response.status().is_success()||response.headers().get("content-type").and_then(|v|v.to_str().ok())!=Some("application/zip"){return Err("A entrega não está disponível ou não passou a verificação.".into());}
+ if response.content_length().map_or(true,|length|length>32_000_000){return Err("Entrega demasiado grande.".into());}
+ let bytes=response.bytes().await.map_err(|_|"Não foi possível ler a entrega.".to_string())?;
+ if bytes.len()>32_000_000||!bytes.starts_with(&[80,75,3,4]){return Err("ZIP inválido.".into());}
+ let selected=rfd::AsyncFileDialog::new().set_title("Guardar projeto entregue pelo Nexo AI").set_file_name("Projeto-NexoAI.zip").add_filter("Projeto ZIP",&["zip"]).save_file().await;
+ if let Some(file)=selected{file.write(&bytes).await.map_err(|_|"Não foi possível guardar o ZIP.".to_string())?;return Ok(true)}Ok(false)
+}
+
 fn main() {
-    let app=tauri::Builder::default().plugin(tauri_plugin_single_instance::init(|app,_,_|{if let Some(window)=app.get_webview_window("main"){let _=window.show();let _=window.set_focus();}})).invoke_handler(tauri::generate_handler![api,save_file,choose_update,apply_update]).setup(|app| {
+    let app=tauri::Builder::default().plugin(tauri_plugin_single_instance::init(|app,_,_|{if let Some(window)=app.get_webview_window("main"){let _=window.show();let _=window.set_focus();}})).invoke_handler(tauri::generate_handler![api,save_file,save_project_zip,choose_update,apply_update]).setup(|app| {
         let resource=app.path().resource_dir()?;
         let backend=resource.join("backend");
         let data=app.path().app_local_data_dir()?;
