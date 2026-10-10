@@ -53,6 +53,12 @@ jobs:
         with:
           name: windows-installation-results
           path: ${{ runner.temp }}/nexo-release-validation/*.json
+      - name: Guardar diagnóstico do ambiente de teste
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: windows-installation-diagnostics
+          path: ${{ runner.temp }}/nexo-release-validation/*.txt
       - name: Guardar capturas
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

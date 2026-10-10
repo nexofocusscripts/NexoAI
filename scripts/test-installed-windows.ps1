@@ -13,13 +13,20 @@ $shortcuts=@(Get-ChildItem -LiteralPath ([Environment]::GetFolderPath('Programs'
 if($shortcuts.Count -eq 0){throw 'Atalho do menu Iniciar ausente.'}
 $listener=[Net.Sockets.TcpListener]::new([Net.IPAddress]::Loopback,0);$listener.Start();$port=$listener.LocalEndpoint.Port;$listener.Stop()
 $env:WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS="--remote-debugging-port=$port --disable-gpu"
+$env:WEBVIEW2_USER_DATA_FOLDER=Join-Path $testRoot 'webview-data'
+$env:RUST_BACKTRACE='1'
 $env:NEXO_TEST_CDP_PORT="$port"
 $env:NEXO_TEST_RESULTS=$testRoot
-$app=Start-Process -FilePath $exe -PassThru -WindowStyle Hidden
+$app=Start-Process -FilePath $exe -PassThru -WindowStyle Hidden -RedirectStandardOutput (Join-Path $testRoot 'app-stdout.txt') -RedirectStandardError (Join-Path $testRoot 'app-stderr.txt')
+@{installer=$setupProcess.ExitCode;startMenuShortcut=$true;webViewPresentBeforeInstall=$webViewPresent;version=(Get-Item -LiteralPath $exe).VersionInfo.ProductVersion;processId=$app.Id;cdpPort=$port} | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $testRoot 'installation.json')
 try{
     & node tests/windows-installed.mjs
     if($LASTEXITCODE -ne 0){throw 'Primeiro arranque desktop falhou.'}
     @{installer=$setupProcess.ExitCode;startMenuShortcut=$true;webViewPresentBeforeInstall=$webViewPresent;version=(Get-Item -LiteralPath $exe).VersionInfo.ProductVersion} | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $testRoot 'installation.json')
 }finally{
+    $app.Refresh()
+    @{exitedBeforeCleanup=$app.HasExited;exitCode=if($app.HasExited){$app.ExitCode}else{$null};webViewProcesses=@(Get-Process -Name msedgewebview2 -ErrorAction SilentlyContinue | Select-Object Id,SessionId)} | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath (Join-Path $testRoot 'process.json')
+    $serviceLog=Join-Path $env:LOCALAPPDATA 'pt.nexoai.desktop\service.log'
+    if(Test-Path -LiteralPath $serviceLog){Copy-Item -LiteralPath $serviceLog -Destination (Join-Path $testRoot 'service.txt')}
     if(!$app.HasExited){[void]$app.CloseMainWindow();if(!$app.WaitForExit(10000)){$app.Kill();$app.WaitForExit()}}
 }
