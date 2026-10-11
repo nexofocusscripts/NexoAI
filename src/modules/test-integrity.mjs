@@ -3,7 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {projectPath} from './filesystem.mjs';
 const digest=content=>crypto.createHash('sha256').update(content).digest('hex');
-export async function sealTests(root,tests){
+export async function sealTests(root,tests,{allowEmpty=false}={}){
  const argumentsList=tests.flatMap(t=>t.testPaths||t.arguments.filter(a=>!a.startsWith('-')));
  const patterns=argumentsList.map(argument=>({argument,regex:new RegExp('^'+argument.split('*').map(s=>s.replace(/[.+?^${}()|[\]\\]/g,'\\$&')).join('.*')+'$')}));
  const sealed={};let files=0;
@@ -20,7 +20,7 @@ export async function sealTests(root,tests){
    }
   }
  }
- await visit();if(!Object.keys(sealed).length)throw Error('Os testes autorizados não correspondem a ficheiros do projeto.');return sealed;
+ await visit();if(!allowEmpty&&!Object.keys(sealed).length)throw Error('Os testes autorizados não correspondem a ficheiros do projeto.');return sealed;
 }
 export async function guardTests(root,sealed,actions){
  for(const [rel,expected] of Object.entries(sealed||{})){

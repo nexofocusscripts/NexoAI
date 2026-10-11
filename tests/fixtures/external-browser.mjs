@@ -1,0 +1,17 @@
+import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';import {expect} from '@playwright/test';
+export async function externalBrowser({page,data,create}){
+ const sends=async()=>{try{return(await fs.readFile(path.join(data,'external-fixture.jsonl'),'utf8')).trim().split('\n').filter(Boolean).length}catch{return 0}};
+ await page.getByRole('button',{name:'Definições',exact:true}).click();
+ await page.getByRole('checkbox',{name:'Modo online',exact:true}).click();await expect(page.getByRole('checkbox',{name:'Modo online',exact:true})).toBeChecked();await page.getByRole('checkbox',{name:'Providers externos',exact:true}).click();await expect(page.getByRole('checkbox',{name:'Providers externos',exact:true})).toBeChecked();
+ await page.getByLabel('URL HTTPS',{exact:true}).first().fill('https://fixture.invalid/v1');await page.locator('section').getByLabel('Modelo',{exact:true}).first().fill('fixture-model');await page.getByLabel('Chave de API',{exact:true}).first().fill('fixture-test-only');await page.getByRole('checkbox',{name:'Ativar este provider',exact:true}).click();await expect(page.getByRole('checkbox',{name:'Ativar este provider',exact:true})).toBeChecked();await page.getByRole('button',{name:'Guardar configuração',exact:true}).click();
+ await create('Projeto externo');await page.getByLabel('Provider do agente').selectOption('openai-compatible');
+ const request=async()=>{await page.getByLabel('Mensagem',{exact:true}).fill('Cria uma soma e entrega ZIP.');await page.getByRole('button',{name:'Enviar ↑'}).click();};
+ const externalHeading=()=>page.getByRole('heading',{name:'Autorizar pedido do agente ao provider externo',exact:true});
+ await request();await expect(externalHeading()).toBeVisible({timeout:30000});assert.equal(await sends(),0);await page.getByRole('button',{name:'Cancelar',exact:true}).click();await expect(externalHeading()).toHaveCount(0);await expect(page.getByRole('alert')).toBeVisible();assert.equal(await sends(),0);assert.equal((await fs.readdir(path.join(data,'projects','Projeto externo'))).length,0);
+ await page.getByRole('button',{name:'Conversar',exact:true}).click();await request();
+ for(let n=0;n<2;n++){await expect(externalHeading()).toBeVisible({timeout:30000});assert.equal(await sends(),n);const text=await page.getByRole('dialog').innerText();assert.match(text,/fixture.invalid/);assert.doesNotMatch(text,/fixture-test-only/);await page.getByRole('button',{name:'Confirmar',exact:true}).click();await expect.poll(sends).toBe(n+1);}
+ await expect(page.getByRole('heading',{name:'Autorizar criação, revisão e entrega',exact:true})).toBeVisible({timeout:30000});assert.equal((await fs.readdir(path.join(data,'projects','Projeto externo'))).length,0);await page.getByRole('button',{name:'Confirmar',exact:true}).click();
+ for(let n=2;n<4;n++){await expect(externalHeading()).toBeVisible({timeout:30000});assert.equal(await sends(),n);await page.getByRole('button',{name:'Confirmar',exact:true}).click();await expect.poll(sends).toBe(n+1);}
+ await expect(page.getByRole('heading',{name:'Projeto pronto para guardar',exact:true})).toBeVisible({timeout:90000});await expect(page.getByText('Tentativa 2',{exact:true})).toBeVisible();await page.getByRole('button',{name:'Guardar ZIP do projeto…',exact:true}).click();
+ console.log('PASS: external agent refusal, per-request consent, protected real tests, correction and ZIP; controlled provider responses.');
+}

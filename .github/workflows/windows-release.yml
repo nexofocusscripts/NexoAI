@@ -1,14 +1,17 @@
 name: Instalação Windows e primeiro arranque
 on:
   push:
-    branches: [main]
+    branches: [main, codex/agent-improvements]
     paths:
       - .github/workflows/windows-release.yml
       - scripts/test-installed-windows.ps1
+      - scripts/test-without-webview.ps1
       - tests/windows-installed.mjs
       - src-tauri/tauri.conf.json
       - scripts/build-desktop.ps1
       - scripts/prepare-build-directory.ps1
+      - scripts/build-native.ps1
+      - native/hardware.cpp
   release:
     types: [published]
   workflow_dispatch:
@@ -16,11 +19,15 @@ on:
       tag:
         description: Versão pública a testar
         required: true
-        default: v1.0.5
+        default: v1.0.6
 permissions:
   contents: read
 jobs:
   install:
+    strategy:
+      fail-fast: false
+      matrix:
+        webview: [present, absent]
     runs-on: windows-latest
     timeout-minutes: 45
     env:
@@ -44,6 +51,12 @@ jobs:
       - name: Verificar assinatura e obter instalador
         if: github.event_name == 'release'
         run: node --use-system-ca scripts/fetch-release-test.mjs
+      - name: Preparar Windows sem WebView2
+        if: matrix.webview == 'absent'
+        shell: pwsh
+        run: |
+          ./scripts/test-without-webview.ps1
+          'NEXO_EXPECT_WEBVIEW_ABSENT=1' | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
       - name: Instalar e validar primeiro arranque
         shell: pwsh
         run: ./scripts/test-installed-windows.ps1
@@ -51,17 +64,17 @@ jobs:
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: windows-installation-results
+          name: windows-installation-results-${{ matrix.webview }}
           path: ${{ runner.temp }}/nexo-release-validation/*.json
       - name: Guardar diagnóstico do ambiente de teste
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: windows-installation-diagnostics
+          name: windows-installation-diagnostics-${{ matrix.webview }}
           path: ${{ runner.temp }}/nexo-release-validation/*.txt
       - name: Guardar capturas
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: windows-installation-screenshots
+          name: windows-installation-screenshots-${{ matrix.webview }}
           path: ${{ runner.temp }}/nexo-release-validation/*.png

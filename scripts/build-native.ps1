@@ -16,7 +16,7 @@ if ($PrepareOnly) { return }
 Push-Location $projectRoot
 try {
     New-Item -ItemType Directory -Path 'src-tauri/resources' -Force | Out-Null
-    foreach ($helper in @('sandbox', 'vault', 'signature', 'updater')) {
+    foreach ($helper in @('sandbox', 'vault', 'signature', 'updater', 'hardware')) {
         & cl.exe /nologo /std:c++17 /EHsc /O2 /MT /GS /guard:cf "native/$helper.cpp" "/Fosrc-tauri/resources/$helper.obj" "/Fesrc-tauri/resources/nexo-$helper.exe" /link /DYNAMICBASE /NXCOMPAT /HIGHENTROPYVA /guard:cf
         if ($LASTEXITCODE -ne 0) { throw "Falha ao compilar $helper." }
     }

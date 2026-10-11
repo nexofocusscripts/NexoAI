@@ -9,11 +9,11 @@ function requestFor(settings,kind,input){
   if(!Array.isArray(messages)||messages.some(m=>!['user','assistant','system'].includes(m.role)||typeof m.content!=='string'))throw Error('Mensagens inválidas.');
   if(input.provider==='anthropic'){
    const c=providers.anthropic;if(!c?.enabled||!c.apiKey)throw Error('Provider Anthropic não configurado.');
-   return {url:'https://api.anthropic.com/v1/messages',method:'POST',headers:{'content-type':'application/json','x-api-key':c.apiKey,'anthropic-version':'2023-06-01'},body:{model:input.model||c.model,max_tokens:4096,system:messages.filter(m=>m.role==='system').map(m=>m.content).join('\n'),messages:messages.filter(m=>m.role!=='system')}};
+   return {url:'https://api.anthropic.com/v1/messages',method:'POST',headers:{'content-type':'application/json','x-api-key':c.apiKey,'anthropic-version':'2023-06-01'},body:{model:input.model||c.model,max_tokens:4096,system:messages.filter(m=>m.role==='system').map(m=>m.content).join('\n'),messages:messages.filter(m=>m.role!=='system'),...(input.schema?{tools:[{name:'submit_nexo_plan',description:'Return the structured Nexo agent plan or review.',input_schema:input.schema}],tool_choice:{type:'tool',name:'submit_nexo_plan'}}:{})}};
   }
   if(input.provider!=='openai-compatible')throw Error('Provider não suportado.');
   const c=providers.openai;if(!c?.enabled||!c.apiKey)throw Error('Provider de texto não configurado.');
-  return {url:endpoint(c.baseUrl,'/chat/completions'),method:'POST',headers:{'content-type':'application/json',authorization:'Bearer '+c.apiKey},body:{model:input.model||c.model,messages,stream:false}};
+  return {url:endpoint(c.baseUrl,'/chat/completions'),method:'POST',headers:{'content-type':'application/json',authorization:'Bearer '+c.apiKey},body:{model:input.model||c.model,messages,stream:false,...(input.schema?{response_format:{type:'json_schema',json_schema:{name:'nexo_agent',schema:input.schema}}}:{})}};
  }
  if(kind==='image'){
   const c=providers.image;if(!settings.externalAI||!c?.enabled||!c.apiKey)throw Error('Geração externa de imagens desativada.');
@@ -29,11 +29,12 @@ function requestFor(settings,kind,input){
 }
 const digest=value=>crypto.createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export function externalConsent({fetcher=fetch}={}){const pending=new Map();return {
+ discard(id){pending.delete(id)},
  prepare(settings,kind,input){
-  const request=requestFor(settings,kind,input);if(JSON.stringify(request).length>524288)throw Error('Dados externos demasiado grandes.');
+  const request=structuredClone(requestFor(settings,kind,input));if(JSON.stringify(request).length>524288)throw Error('Dados externos demasiado grandes.');
   const id=crypto.randomUUID(),expiresAt=Date.now()+300000;pending.set(id,{settingsHash:digest(request),kind,input:structuredClone(input),request,expiresAt});
   const headers={...request.headers};for(const key of ['authorization','x-api-key','x-subscription-token'])if(headers[key])headers[key]='[credencial configurada: enviada neste cabeçalho]';
-  return {id,expiresAt,destination:request.url,method:request.method,headers,payload:request.body??null,payloadText:request.body?JSON.stringify(request.body):'',payloadSha256:digest(request.body??null),warning:'Revê o destino e todos os dados do pedido. Nada é enviado antes de confirmares.'};
+  return {id,expiresAt,destination:request.url,method:request.method,headers,payload:structuredClone(request.body??null),payloadText:request.body?JSON.stringify(request.body):'',payloadSha256:digest(request.body??null),warning:'Revê o destino e todos os dados do pedido. Nada é enviado antes de confirmares.'};
  },
  async send(settings,id){
   const approval=pending.get(id);pending.delete(id);
@@ -41,6 +42,7 @@ export function externalConsent({fetcher=fetch}={}){const pending=new Map();retu
   if(digest(requestFor(settings,approval.kind,approval.input))!==approval.settingsHash)throw Error('O provider ou o pedido mudou. Revê os dados novamente.');
   const r=approval.request,response=await fetcher(r.url,{method:r.method,headers:r.headers,...(r.body?{body:JSON.stringify(r.body)}:{}),signal:AbortSignal.timeout(180000),redirect:'error'});
   if(!response.ok)throw Error(`Serviço externo HTTP ${response.status}`);const result=await response.json();
+  if(approval.kind==='chat'&&approval.input.schema&&approval.input.provider==='anthropic'){const tool=result.content?.find(c=>c.type==='tool_use'&&c.name==='submit_nexo_plan');if(!tool)throw Error('O provider não devolveu o plano estruturado.');return {kind:'chat',message:JSON.stringify(tool.input)}}
   if(approval.kind==='chat')return {kind:'chat',message:approval.input.provider==='anthropic'?result.content?.map(x=>x.text||'').join('')||'':result.choices?.[0]?.message?.content||''};
   if(approval.kind==='search')return {kind:'search',results:(result.results||result.web?.results||[]).slice(0,10).map(x=>({title:x.title,url:x.url,snippet:x.content||x.description||''}))};
   return {kind:'image',data:result.data||[]};

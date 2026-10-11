@@ -39,6 +39,7 @@
       "../public/": "backend/public/",
       "../node_modules/fflate/": "backend/node_modules/fflate/",
       "resources/nexo-updater.exe": "backend/nexo-updater.exe",
+      "resources/nexo-hardware.exe": "backend/nexo-hardware.exe",
       "resources/nexo-lua-tests.exe": "backend/nexo-lua-tests.exe",
       "resources/python/": "backend/python/"
     },

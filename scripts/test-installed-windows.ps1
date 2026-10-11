@@ -3,7 +3,9 @@ if($env:GITHUB_ACTIONS -ne 'true'){throw 'Executar apenas na máquina Windows is
 $testRoot=Join-Path $env:RUNNER_TEMP 'nexo-release-validation'
 $installRoot=Join-Path $testRoot 'installed'
 $installer=Join-Path $testRoot 'setup.exe'
-$webViewPresent=Test-Path -LiteralPath (Join-Path ${env:ProgramFiles(x86)} 'Microsoft\EdgeWebView\Application')
+$webViewRoot=Join-Path ${env:ProgramFiles(x86)} 'Microsoft\EdgeWebView\Application'
+$webViewPresent=(Test-Path -LiteralPath $webViewRoot) -and (@(Get-ChildItem -LiteralPath $webViewRoot -Recurse -Filter msedgewebview2.exe).Count -gt 0)
+if($env:NEXO_EXPECT_WEBVIEW_ABSENT -eq '1' -and $webViewPresent){throw 'O ensaio exige WebView2 ausente antes da instalação.'}
 $setupProcess=Start-Process -FilePath $installer -ArgumentList @('/S','/CURRENTUSER',('/D='+$installRoot)) -PassThru -Wait -WindowStyle Hidden
 if($setupProcess.ExitCode -ne 0){throw "Instalador falhou: $($setupProcess.ExitCode)"}
 $exe=Join-Path $installRoot 'nexo-ai.exe'
