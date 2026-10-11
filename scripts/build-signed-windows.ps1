@@ -13,7 +13,7 @@ try{if(!$chain.Build($certificate)){throw 'A cadeia do certificado não é recon
 $projectRoot=Split-Path $PSScriptRoot -Parent
 & (Join-Path $PSScriptRoot 'build-native.ps1')
 $signTool=(Get-Command signtool.exe -ErrorAction Stop).Source
-foreach($name in @('sandbox','vault','signature','updater')){
+foreach($name in @('sandbox','vault','signature','updater','lua-tests')){
     $file=Join-Path $projectRoot "src-tauri\resources\nexo-$name.exe"
     & $signTool sign /sha1 $CertificateThumbprint /fd SHA256 /tr $TimestampServer.AbsoluteUri /td SHA256 $file
     if($LASTEXITCODE -ne 0){throw "Falha de assinatura: $name"}

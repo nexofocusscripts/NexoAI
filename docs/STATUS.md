@@ -1,5 +1,7 @@
 # Estado de validação
 
+Candidato 1.0.6 no ramo codex/agent-improvements: 76/76 testes locais aprovados, incluindo C#; interface com anexos PNG/PDF, consentimento de atualização e execução real do agente aprovada. Python e Lua realmente empacotados passaram testes AppContainer. Download integrado do pacote público 1.0.5 verificado por assinatura e checksums sem o instalar. A instalação do novo instalador e primeiro arranque passou em https://github.com/nexofocusscripts/NexoAI/actions/runs/38130199623; o runner já tinha WebView2; detalhes e limites em DEVELOPMENT.md. A informação abaixo regista a distribuição pública 1.0.5.
+
 Versão 1.0.5: desktop Tauri/React, instalador NSIS, onboarding, inventário Windows, Ollama e arquitetura de runtimes, gestão e comparação de modelos, projetos/chats, agente autorizado, isolamento AppContainer, memória persistente/semântica, documentos, visão e imagens locais, serviços externos opcionais com consentimento, auditoria, diagnóstico e atualização local assinada. Design NexoX original adaptado em laranja/amarelo/roxo, temas persistentes.
 
 Novo fluxo de entrega: deteção automática de pedidos ou escolha manual, plano completo antes de autorizar, criação de ficheiros, revisão pelo modelo, testes protegidos, correção iterativa e ZIP com relatório e inventário. Sem provas válidas não há entrega validada. Ver AGENT-DELIVERY.md.

@@ -14,7 +14,7 @@ Candidato em validação: 1.0.6. Não distribuir antes da verificação do pacot
 - Corrigido o canal público 1.0.5: o checksum do pacote antigo não correspondia ao asset publicado; novo manifesto assinado aponta ao checksum real. Os binários públicos não mudaram.
 - Mensagens com blocos de código e cópia, títulos e listas; HTML recebido permanece texto. Corrigida uma variável que impedia anexar PNG/JPEG ao ocultar o objeto document do navegador. PDF/DOCX continuam a ser lidos localmente.
 
-Validação: 74/74 testes locais passaram com C# ativo; CI do executor C# e contribuições passaram no commit 3bb8cd3. Fluxo de navegador com backend e AppContainer reais passou antes da última correção de anexos; repetir esse fluxo e a compilação final após essa correção.
+Validação: 76/76 testes locais passaram com C# ativo; CI do executor C# e contribuições passaram no commit 3bb8cd3. Fluxo de navegador com backend e AppContainer reais passou antes da última correção de anexos; repetir esse fluxo e a compilação final após essa correção.
 
 Limites ainda a validar: teste exigente com modelo de programação real (o Qwen14B anterior já não está disponível no caminho conhecido); instalador deste candidato em runner Windows; instalação de WebView2 quando ausente; outras GPUs e providers comerciais. O ambiente permite AppContainer e testes desktop em CI, mas não comprova todos os computadores Windows. Authenticode permanece em standby.
 
@@ -31,3 +31,5 @@ Ordem autorizada: executores; qualidade do agente em projetos maiores; providers
 Validação local: 65/65 testes passaram com C# ativado; provas reais de Python, Lua e C# incluem comportamento, falhas, ausência de testes, ficheiros privados e rede (Python/C#). Interface anterior passou após a primeira integração de Python/Lua; as alterações seguintes exigem nova revisão. Não declarar validado o instalador deste ramo até construir e testar o pacote final.
 
 Fontes oficiais: https://www.python.org/downloads/release/python-31316/ ; https://www.lua.org/ftp/ ; https://builds.dotnet.microsoft.com/dotnet/release-metadata/10.0/releases.json . Licenças de Python acompanham o runtime; a fonte e licença Lua estão em native/vendor/lua-5.4.9; os avisos Microsoft são preservados no runtime opcional.
+
+Validação final do candidato: instalação Windows e primeiro arranque 1.0.6 passaram em https://github.com/nexofocusscripts/NexoAI/actions/runs/38130199623 (atalho, interface nativa, onboarding, inventário; WebView2 já presente, sem downloads de modelos). Fluxos de interface finais e executores empacotados passaram. Auxiliar nativo de atualização/rollback passou com instaladores de teste isolados, incluindo recuperação após falha. Sem alteração da instalação do utilizador.
