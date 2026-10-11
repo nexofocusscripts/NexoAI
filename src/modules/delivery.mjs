@@ -35,7 +35,7 @@ export function deliveryService(data,validation){
    for(const id of session.validationIds)await validation.require(session.project,root,id);
    const report={format:'nexo-delivery-v1',project:session.project,sessionId:session.id,model:session.model,createdAt:new Date().toISOString(),snapshot,
     validation:'Passou os testes comportamentais autorizados desta versão; não é garantia de ausência de erros.',
-    tests:session.iterations.at(-1)?.tests.map(t=>({ok:t.ok,code:t.code,testCount:t.testCount,sandbox:t.sandbox,validationId:t.validation?.id}))||[],
+    tests:session.iterations.at(-1)?.tests.map(t=>({ok:t.ok,code:t.code,testCount:t.testCount,runtime:t.runtime||'node',compileSteps:t.compile?.length||0,sandbox:t.sandbox,validationId:t.validation?.id}))||[],
     files:inventory,excluded,review:session.iterations.at(-1)?.review?{performed:true,blocking:session.iterations.at(-1).review.blocking===true,findingsCount:session.iterations.at(-1).review.findings?.length||0}:null};
    files['NEXO-RELATORIO.json']=Buffer.from(JSON.stringify(report,null,2));
    const bytes=zipSync(files,{level:6});if(bytes.length>32000000)throw Error('ZIP excede o limite de 32 MB.');

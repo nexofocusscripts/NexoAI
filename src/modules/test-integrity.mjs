@@ -4,7 +4,7 @@ import crypto from 'node:crypto';
 import {projectPath} from './filesystem.mjs';
 const digest=content=>crypto.createHash('sha256').update(content).digest('hex');
 export async function sealTests(root,tests){
- const argumentsList=tests.flatMap(t=>t.arguments.filter(a=>!a.startsWith('-')));
+ const argumentsList=tests.flatMap(t=>t.testPaths||t.arguments.filter(a=>!a.startsWith('-')));
  const patterns=argumentsList.map(argument=>({argument,regex:new RegExp('^'+argument.split('*').map(s=>s.replace(/[.+?^${}()|[\]\\]/g,'\\$&')).join('.*')+'$')}));
  const sealed={};let files=0;
  async function visit(relative='.'){

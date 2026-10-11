@@ -20,4 +20,14 @@ try {
         & cl.exe /nologo /std:c++17 /EHsc /O2 /MT /GS /guard:cf "native/$helper.cpp" "/Fosrc-tauri/resources/$helper.obj" "/Fesrc-tauri/resources/nexo-$helper.exe" /link /DYNAMICBASE /NXCOMPAT /HIGHENTROPYVA /guard:cf
         if ($LASTEXITCODE -ne 0) { throw "Falha ao compilar $helper." }
     }
+    & node --use-system-ca scripts/prepare-executors.mjs
+    if($LASTEXITCODE -ne 0){throw 'Falha ao preparar executores.'}
+    $luaSources=@(Get-ChildItem -LiteralPath 'native/vendor/lua-5.4.9/src' -Filter '*.c' | Where-Object {$_.Name -notin @('lua.c','luac.c')} | ForEach-Object {$_.FullName})
+    $luaObjects='src-tauri/resources/lua-obj'
+    New-Item -ItemType Directory -Path $luaObjects -Force | Out-Null
+    & cl.exe /nologo /O2 /MT /GS /guard:cf /c $luaSources "/Fo$luaObjects/"
+    if($LASTEXITCODE -ne 0){throw 'Falha ao compilar Lua.'}
+    $objects=@(Get-ChildItem -LiteralPath $luaObjects -Filter '*.obj' | ForEach-Object {$_.FullName})
+    & cl.exe /nologo /std:c++17 /EHsc /O2 /MT /GS /guard:cf native/lua-tests.cpp $objects /Fosrc-tauri/resources/lua-tests.obj /Fesrc-tauri/resources/nexo-lua-tests.exe /link /DYNAMICBASE /NXCOMPAT /HIGHENTROPYVA /guard:cf
+    if($LASTEXITCODE -ne 0){throw 'Falha ao compilar o executor Lua.'}
 } finally { Pop-Location }

@@ -1,0 +1,31 @@
+name: Testes C# isolados
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - src/modules/csharp-*.mjs
+      - src/modules/test-executors.mjs
+      - src/modules/sandbox.mjs
+      - native/sandbox.cpp
+      - src/runners/csharp-tests.cs
+      - config/csharp-runtime.json
+      - tests/csharp.windows.test.mjs
+      - scripts/prepare-csharp-test.mjs
+      - .github/workflows/csharp.yml
+permissions:
+  contents: read
+jobs:
+  csharp:
+    runs-on: windows-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: '24.21.0'
+          cache: npm
+      - run: npm ci
+      - shell: pwsh
+        run: ./scripts/build-native.ps1
+      - run: node --use-system-ca scripts/prepare-csharp-test.mjs
+      - run: node --test tests/csharp.windows.test.mjs
