@@ -1,4 +1,4 @@
 {
-  "payload": "{\"product\":\"NexoAI\",\"version\":\"1.0.5\",\"dataSchema\":1,\"file\":\"setup.exe\",\"bytes\":28806980,\"sha256\":\"ad18a0fde56c9a264f50e18ff19f88fd0ce663f2ca7c3782a0aa993d27ed8793\",\"packageUrl\":\"https://github.com/nexofocusscripts/NexoAI/releases/download/v1.0.5/Atualizacao-Nexo-AI-1.0.5.nexoupdate\",\"packageBytes\":28807500,\"packageSha256\":\"c0e2eecb018e678710efa594a8c0176172bc365ed807b56da8781b0fe772a8d9\",\"notes\":\"Atualização Windows. Revê as notas e limitações na página oficial antes de instalar.\"}",
-  "signature": "FH1bXwqxxP+HmEYB6gI83q2Y6KzPIy4FVXqiQsjZqJz6yEBSeij0gPxUCUBBS624X/keUvVFHN/wg0Y+Zb91AQ=="
+  "payload": "{\"product\":\"NexoAI\",\"version\":\"1.0.5\",\"dataSchema\":1,\"file\":\"setup.exe\",\"bytes\":28806980,\"sha256\":\"ad18a0fde56c9a264f50e18ff19f88fd0ce663f2ca7c3782a0aa993d27ed8793\",\"packageUrl\":\"https://github.com/nexofocusscripts/NexoAI/releases/download/v1.0.5/Atualizacao-Nexo-AI-1.0.5.nexoupdate\",\"packageBytes\":28807500,\"packageSha256\":\"0325251df713c0db331af929d55d15fba0fea0f2975c7cbf8e2ae360e74e46c5\",\"notes\":\"Atualização Windows. Revê as notas e limitações na página oficial antes de instalar.\"}",
+  "signature": "1Sk2g9seRyvCT8mWEU8tWu4AH/kU1APUXT/V4TlYiaODCHd/569oKnNKi2oDPAsdhuVLMEaOAXJe5rEaZ6aECQ=="
 }

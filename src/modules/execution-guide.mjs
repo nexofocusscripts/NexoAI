@@ -13,7 +13,7 @@ export async function executionGuide({executor='auto',prompt='',files=[],dotnetR
   else if(/\b(lua|fivem)\b|\.lua\b/i.test(prompt))selected='lua';
   else if(/c#|\bcsharp\b|\.net\b|\bdotnet\b/i.test(prompt))selected='csharp';
   else if(/\b(java|rust|golang)\b/i.test(prompt))throw Error('Este ambiente ainda não tem testes dessa linguagem. Não vou declarar a entrega validada através de um teste Node que não executa a implementação.');
-  else{const names=files.map(f=>f.path||f);selected=names.some(n=>/\.py$/.test(n))&&!names.some(n=>/\.[cm]?js$/.test(n))?'python':names.some(n=>/\.lua$/.test(n))&&!names.some(n=>/\.[cm]?js$/.test(n))?'lua':'node'}
+  else{const names=files.map(f=>f.path||f);selected=names.some(n=>/\.py$/.test(n))&&!names.some(n=>/\.[cm]?js$/.test(n))?'python':names.some(n=>/\.lua$/.test(n))&&!names.some(n=>/\.[cm]?js$/.test(n))?'lua':names.some(n=>/\.(?:cs|csproj)$/.test(n))&&!names.some(n=>/\.[cm]?js$/.test(n))?'csharp':'node'}
  }
  await executorIdentity(selected,{dotnetRoot});return {executor:selected,instructions:guides[selected]};
 }
