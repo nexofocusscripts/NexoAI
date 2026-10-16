@@ -121,3 +121,6 @@ Ensaio real com Qwen2.5-Coder 14B, 23 perguntas em 22 áreas, usando apenas os 7
 
 Validação: 140/140 testes sem ignorados; fluxo educativo no navegador passou; backend distribuído com Node incluído passou arranque, PIN, isolamento, catálogo offline, cálculo exato, recusa sem fontes e fichas/soluções separadas. O leitor de PDF do backend distribuído extraiu as 42 páginas do documento real de Matemática. O instalador de teste compilou com sucesso; não foi instalado no PC do utilizador. Instalação, atualização e recuperação em máquina limpa continuam por validar.
 
+
+Reforço adversarial: o modelo revisor isolado aceitou indevidamente duas de doze passagens sintéticas (objetivo curricular e tentativa de manipulação). A cadeia completa passou a recusar instruções reconhecidas antes do modelo, além da triagem dos objetivos: repetição com seis passagens úteis e seis inadequadas teve 12/12 decisões esperadas. É um ensaio pequeno com um modelo; o filtro heurístico não cobre todas as manipulações e pode recusar conteúdo legítimo. Bateria atual: 141/141 testes, sem ignorados.
+
