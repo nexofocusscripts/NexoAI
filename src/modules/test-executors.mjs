@@ -28,7 +28,7 @@ export async function parseNonNode(project,tokens,options={}){
   if(!/^[a-zA-Z0-9_.*-]+\.py$/.test(pattern)||pattern.includes('..'))throw Error('Padrão de testes inválido.');
   if(folder!=='.'&&(!/^[a-zA-Z0-9_ /.-]+$/.test(folder)||folder.split('/').some(p=>p==='..'||p==='.'||!p)))throw Error('Pasta de testes inválida.');
   await projectPath(project,folder);
-  runtime='python';args=['-I','-B','-m','unittest','discover','-s',folder,'-p',pattern,'-t','.'];testPaths=[folder==='.'?pattern:folder+'/'+pattern];
+  runtime='python';args=options.pythonPaths?.length?['-I','-B','-c','import sys, unittest; sys.path[:0] = '+JSON.stringify(options.pythonPaths)+'; unittest.main(module=None, argv='+JSON.stringify(['unittest','discover','-s',folder,'-p',pattern,'-t','.'])+')']:['-I','-B','-m','unittest','discover','-s',folder,'-p',pattern,'-t','.'];testPaths=[folder==='.'?pattern:folder+'/'+pattern];
  }else if(tokens[0]==='lua'){
   if(tokens.length!==2||!tokens[1].endsWith('.lua')||tokens[1].startsWith('-'))throw Error('Lua exige um ficheiro de testes .lua.');
   await projectPath(project,tokens[1]);runtime='lua';args=[tokens[1]];testPaths=[tokens[1]];
@@ -36,7 +36,7 @@ export async function parseNonNode(project,tokens,options={}){
   const folder=tokens[2]||'tests';if(tokens[1]!=='test'||tokens.length>3||!/^([a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_.-]+$/.test(folder)||folder.includes('..'))throw Error('Usa csharp test tests, com uma pasta ou ficheiro de testes dentro do projeto.');
   await projectPath(project,folder);runtime='csharp';args=['test',folder];testPaths=[folder];
  }else return null;
- return {...await executorIdentity(runtime,options),arguments:args,testPaths};
+ return {...await executorIdentity(runtime,options),arguments:args,testPaths,...(options.dependencyFingerprint?{dependencyFingerprint:options.dependencyFingerprint,references:options.references||[],dependencies:options.dependencies||[]}:{})};
 }
 export function countTests(runtime,stdout,stderr){
  if(runtime==='csharp')return Number((stderr.match(/^NEXO_CSHARP_TESTS=(\d+) FAILED=\d+$/m)||[])[1]||0);

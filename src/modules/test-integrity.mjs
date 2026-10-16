@@ -28,8 +28,8 @@ export async function guardTests(root,sealed,actions){
   for(const action of actions){
    if(!['write','delete','mkdir'].includes(action.type))continue;
    const target=await projectPath(root,action.path),relative=path.relative(root,target).replaceAll('\\','/');
-   if(action.type==='delete'&&(!relative||rel===relative||rel.startsWith(relative+'/')))throw Error('O agente não pode remover os testes autorizados para fazer a tarefa passar.');
-   if(action.type==='write'&&relative===rel&&digest(String(action.content??''))!==expected)throw Error('O agente tentou alterar os testes autorizados. Revê uma nova sessão.');
+   if(action.type==='delete'&&(!relative||rel.toLowerCase()===relative.toLowerCase()||rel.toLowerCase().startsWith(relative.toLowerCase()+'/')))throw Error('O agente não pode remover os testes autorizados para fazer a tarefa passar.');
+   if(action.type==='write'&&relative.toLowerCase()===rel.toLowerCase()&&digest(String(action.content??''))!==expected)throw Error('O agente tentou alterar os testes autorizados. Revê uma nova sessão.');
   }
  }
 }

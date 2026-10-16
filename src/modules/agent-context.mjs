@@ -1,10 +1,12 @@
 import path from 'node:path';
 import {sensitivePath} from './project-context.mjs';
-export const readingInstructions=' Se precisares de ficheiros omitted, devolve apenas <nexo_read>["caminho relativo"]</nexo_read>, sem ações. O Nexo pode reler até quatro grupos de contexto, mantendo ficheiros completos. Não peças segredos, binários nem pastas internas. Se o trabalho exceder o contexto, propõe dividir o objetivo.';
+export const readingInstructions=' O contexto já contém o conteúdo integral de files. Pede reads com caminhos relativos apenas para ficheiros em omitted, deixando actions vazio. O Nexo pode reler até quatro grupos de contexto, mantendo ficheiros completos. Não peças segredos, binários nem pastas internas. Se o trabalho exceder o contexto, propõe dividir o objetivo.';
 export async function contextConversation({context,chat,messages,maxReads=4}){
  let required=[],view=await context(required);
  for(let round=0;round<=maxReads;round++){
-  const output=await chat(await messages(view));const match=output.match(/<nexo_read>([\s\S]*?)<\/nexo_read>/i);
+  const conversation=await messages(view);
+  if(round){conversation.push({role:'user',content:'Leitura concluída. O conteúdo integral de '+required.join(', ')+' já está incluído no contexto files. Não voltes a pedir estes ficheiros. Analisa esse conteúdo e devolve o plano com ações completas e os testes.'});}
+  const output=await chat(conversation);const match=output.match(/<nexo_read>([\s\S]*?)<\/nexo_read>/i);
   if(!match)return {output,view};
   if(round===maxReads)throw Error('O modelo atingiu o limite de leituras. Divide o objetivo em tarefas menores.');
   if(/<nexo_actions>/i.test(output))throw Error('Uma leitura não pode incluir alterações no mesmo pedido.');

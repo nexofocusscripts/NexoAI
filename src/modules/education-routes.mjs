@@ -1,0 +1,50 @@
+export async function educationRoute(service,route,method,input={}){
+ if(route==='/api/education/state'&&method==='GET')return service.state();
+ if(method!=='POST')throw Error('Operação educativa inválida.');
+ const d=input;
+ switch(route){
+  case '/api/education/setup':return service.setup(d.pin);
+  case '/api/education/unlock':return service.unlock(d.pin);
+  case '/api/education/recover':return service.recover(d.code,d.pin);
+  case '/api/education/guardian':return service.guardian(d.token);
+  case '/api/education/profile':return service.saveProfile(d.token,d.profile||{});
+  case '/api/education/lock':return service.lock(d.token,d.profileId);
+  case '/api/education/exit':return service.exit(d.token);
+  case '/api/education/pin':return service.changePin(d.token,d.pin);
+  case '/api/education/catalog':return service.catalog(d.profileId);
+  case '/api/education/exercise':return service.exercise(d.profileId,d.skill);
+  case '/api/education/hint':return service.hint(d.profileId,d.id);
+  case '/api/education/answer':return service.answer(d.profileId,d.id,d.answer);
+  case '/api/education/session':return service.startSession(d.profileId);
+  case '/api/education/ask':return service.ask(d.profileId,d.id,d.question,d.mode,d.evidenceId);
+  case '/api/education/evidence/prepare':return service.evidencePrepare(d.profileId,d.resultId);
+  case '/api/education/evidence/send':if(d.confirmed!==true)throw Error('Confirma os pedidos exatos às fontes.');return service.evidenceSend(d.token,d.profileId,d.id);
+  case '/api/education/research/prepare':return service.researchPrepare(d.profileId,d.query);
+  case '/api/education/research/send':if(d.confirmed!==true)throw Error('O responsável precisa de confirmar o pedido exato.');return service.researchSend(d.token,d.profileId,d.id);
+  case '/api/education/coverage':return service.curriculumCoverage(d.profileId);
+  case '/api/education/coverage/guardian':return service.guardianCoverage(d.token,d.profileId);
+  case '/api/education/coverage/review':return service.reviewCoverage(d.token,d.profileId,d.goalId,d);
+  case '/api/education/index/prepare':return service.indexPrepare(d.token);
+  case '/api/education/index/check':if(d.confirmed!==true)throw Error('Confirma a consulta do índice.');return service.indexCheck(d.token,d.id);
+  case '/api/education/index/apply':if(d.confirmed!==true)throw Error('Confirma as diferenças do catálogo.');return service.indexApply(d.token,d.id);
+  case '/api/education/curriculum/list':return service.curriculumList(d.profileId);
+  case '/api/education/curriculum/guardian':return service.guardianCurriculum(d.token,d.profileId);
+  case '/api/education/curriculum/prepare':return service.curriculumPrepare(d.token,d.profileId,d.documentId);
+  case '/api/education/curriculum/sync':if(d.confirmed!==true)throw Error('Confirma o pedido exato à DGE.');return service.curriculumSync(d.token,d.profileId,d.id);
+  case '/api/education/curriculum/enable':return service.curriculumEnable(d.token,d.profileId,d.documentId,d.enabled===true);
+  case '/api/education/curriculum/remove':if(d.confirmed!==true)throw Error('Confirma a remoção da cópia curricular local.');return service.curriculumRemove(d.token,d.documentId);
+  case '/api/education/classroom':return service.classroomSave(d.token,d.profileId,d);
+  case '/api/education/photo':return service.photo(d.profileId,d.image);
+  case '/api/education/planning':return service.planningSave(d.token,d.profileId,d);
+  case '/api/education/worksheet':return service.worksheet(d.profileId,d.skill,d.count);
+  case '/api/education/worksheet/solutions':return service.worksheetSolutions(d.token,d.profileId,d.id);
+  case '/api/education/study':return service.study(d.profileId,d.subject);
+  case '/api/education/revise':return service.revise(d.profileId,d.topicId,d.rating);
+  case '/api/education/writing':return service.writing(d.profileId,d.topicId,d.text);
+  case '/api/education/progress':return service.progress(d.token,d.profileId);
+  case '/api/education/history':return service.history(d.token,d.profileId);
+  case '/api/education/remove':if(d.confirmed!==true)throw Error('Confirma a remoção do perfil e dos dados educativos.');return service.removeProfile(d.token,d.profileId);
+  case '/api/education/history/clear':if(d.confirmed!==true)throw Error('Confirma a eliminação do histórico.');return service.clearHistory(d.token,d.profileId);
+  default:throw Error('Operação educativa desconhecida.');
+ }
+}

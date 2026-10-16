@@ -1,6 +1,6 @@
 {
   "name": "nexo-ai",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": true,
   "type": "module",
   "description": "Nexo AI - plataforma local-first de IA, projetos e agentes",

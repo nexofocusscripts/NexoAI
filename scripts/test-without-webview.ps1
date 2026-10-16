@@ -7,7 +7,9 @@ if(Test-Path -LiteralPath $runtimeRoot){
         $signature=Get-AuthenticodeSignature -LiteralPath $setup
         if($signature.Status -ne 'Valid' -or $signature.SignerCertificate.Subject -notmatch 'Microsoft Corporation'){throw 'Desinstalador WebView2 sem assinatura Microsoft válida.'}
         $process=Start-Process -FilePath $setup -ArgumentList @('--uninstall','--msedgewebview','--system-level','--force-uninstall') -PassThru -Wait -WindowStyle Hidden
-        if($process.ExitCode -ne 0){throw "Preparação do ensaio WebView2 falhou: $($process.ExitCode)"}
+        # Chromium installers may report UNINSTALL_SUCCESS as 19. Presence below
+        # remains the deciding check; no successful scenario is inferred from it.
+        if($process.ExitCode -notin @(0,19)){throw "Preparação do ensaio WebView2 falhou: $($process.ExitCode)"}
     }
 }
 if(Test-Path -LiteralPath $runtimeRoot){

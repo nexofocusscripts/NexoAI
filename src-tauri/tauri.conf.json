@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "Nexo AI",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "identifier": "pt.nexoai.desktop",
   "build": {
     "beforeBuildCommand": "npm run ui:build",
@@ -21,7 +21,7 @@
       }
     ],
     "security": {
-      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' ipc: http://ipc.localhost; object-src 'none'; frame-src 'none'; base-uri 'self'"
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; worker-src 'self' blob:; media-src 'self' blob:; connect-src 'self' ipc: http://ipc.localhost; object-src 'none'; frame-src 'none'; base-uri 'self'"
     }
   },
   "bundle": {
@@ -41,7 +41,12 @@
       "resources/nexo-updater.exe": "backend/nexo-updater.exe",
       "resources/nexo-hardware.exe": "backend/nexo-hardware.exe",
       "resources/nexo-lua-tests.exe": "backend/nexo-lua-tests.exe",
-      "resources/python/": "backend/python/"
+      "resources/python/": "backend/python/",
+      "../node_modules/pdfjs-dist/legacy/build/pdf.mjs": "backend/node_modules/pdfjs-dist/legacy/build/pdf.mjs",
+      "../node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs": "backend/node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs",
+      "../node_modules/pdfjs-dist/package.json": "backend/node_modules/pdfjs-dist/package.json",
+      "../node_modules/@napi-rs/canvas/": "backend/node_modules/@napi-rs/canvas/",
+      "../node_modules/@napi-rs/canvas-win32-x64-msvc/": "backend/node_modules/@napi-rs/canvas-win32-x64-msvc/"
     },
     "windows": {
       "webviewInstallMode": {

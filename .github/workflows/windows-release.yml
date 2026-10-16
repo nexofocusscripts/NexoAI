@@ -3,6 +3,11 @@ on:
   push:
     branches: [main, codex/agent-improvements]
     paths:
+      - src/**
+      - ui/**
+      - config/**
+      - package.json
+      - package-lock.json
       - .github/workflows/windows-release.yml
       - scripts/test-installed-windows.ps1
       - scripts/test-without-webview.ps1

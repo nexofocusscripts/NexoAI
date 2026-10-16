@@ -32,9 +32,9 @@ export async function projectContext(root,items,prompt='',{budget=18000,maxFileB
 
 export function guardContextChanges(context,actions){
  for(const action of actions){
-  if(!['write','delete'].includes(action.type))continue;
+  if(!['write','delete','mkdir'].includes(action.type))continue;
   const name=path.posix.normalize(String(action.path||'').replaceAll('\\','/'));
-  if(sensitivePath(name)||name.split('/').some(p=>['.git','.nexo','node_modules'].includes(p.toLowerCase())))throw Error('O agente não pode alterar ficheiros de credenciais, segredos ou pastas internas.');
+  if(sensitivePath(name)||name.toLowerCase().startsWith('vendor/nexo')||(action.type==='delete'&&name.toLowerCase()==='vendor')||name.split('/').some(p=>['.git','.nexo','node_modules'].includes(p.toLowerCase())))throw Error('O agente não pode alterar ficheiros de credenciais, segredos ou bibliotecas geridas.');
   const normalized=name.toLowerCase();
   const omitted=context.omitted.find(x=>x.path.toLowerCase()===normalized||(action.type==='delete'&&(normalized==='.'||x.path.toLowerCase().startsWith(normalized+'/'))));
   if(omitted)throw Error(`O ficheiro ${omitted.path} não foi lido integralmente. A alteração foi bloqueada para preservar o projeto.`);

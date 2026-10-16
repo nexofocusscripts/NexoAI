@@ -38,10 +38,11 @@ export function agentSessions(data,operations){
      tests.push(await operations.test(session.project,preview));
     }
     session.iterations.push({iteration,message:plan.message,results,tests,review});
-    const verified=tests.length>0&&tests.every(t=>t.ok&&t.validation?.ok)&&results.every(r=>r.ok);
+    const verified=tests.length>0&&tests.every(t=>t.ok&&t.validation?.ok)&&results.every(r=>r.ok)&&!review?.blocking;
     if(control.cancelled){session.status='cancelled';break}
     if(verified){session.validationIds=tests.map(t=>t.validation.id);if(session.delivery){if(!operations.deliver)throw Error('Entrega ZIP indisponível.');session.status='packaging';await save(session);session.artifact=await operations.deliver(session)}session.status='validated';break}
     if(!plan.actions.length&&!tests.length){session.status='needs_validation';break}
+    if(operations.projectState){const currentState=await operations.projectState(session.project);if(session.lastFailedState===currentState){session.status='needs_validation';session.error='O agente repetiu a tentativa sem alterar a implementação nem resolver a revisão. Revê o objetivo ou escolhe outro modelo antes de continuar.';break}session.lastFailedState=currentState;}
     session.status='analysing';await save(session);
    }
    if(['editing','testing','analysing','running','reviewing','packaging'].includes(session.status))session.status='limit_reached';

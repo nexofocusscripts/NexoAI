@@ -1,5 +1,7 @@
 # Nexo AI
 
+**Nexo Aprende em desenvolvimento:** espaço educativo local para perfis do 5.º ao 9.º ano, com 171 temas, 19 famílias de exercícios, percursos com revisões espaçadas, dois designs, bússola animada, tutor local apoiado em fontes, consulta autorizada de 70 referências curriculares DGE, cache offline por perfil e área dos responsáveis. Consulte [o funcionamento, testes e limites](docs/NEXO-APRENDE.md). Ainda requer revisão pedagógica e avaliação de segurança antes de distribuição a menores sem acompanhamento.
+
 Plataforma local-first de IA com projetos, modelos locais, agentes, memória, ferramentas, imagens e integrações online opcionais.
 
 ## Windows

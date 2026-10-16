@@ -1,0 +1,1152 @@
+{
+  "authority": "Direção-Geral da Educação",
+  "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+  "checkedAt": "2026-10-14",
+  "documents": [
+    {
+      "id": "dge-portuguese-5-d7dec791",
+      "subject": "portuguese",
+      "title": "Português",
+      "grades": [
+        5
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/5_portugues.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-portuguese-6-fc5bb42f",
+      "subject": "portuguese",
+      "title": "Português",
+      "grades": [
+        6
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/6_portugues.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-portuguese-7-b5a8d9c2",
+      "subject": "portuguese",
+      "title": "Português",
+      "grades": [
+        7
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/portugues_3c_7a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-portuguese-8-f100cc9a",
+      "subject": "portuguese",
+      "title": "Português",
+      "grades": [
+        8
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/portugues_3c_8a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-portuguese-9-bd46016a",
+      "subject": "portuguese",
+      "title": "Português",
+      "grades": [
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/portugues_3c_9a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-math-5-fcf9ea8a",
+      "subject": "math",
+      "title": "Matemática",
+      "grades": [
+        5
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/ae_mat_5.o_ano.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-math-6-71a80cc8",
+      "subject": "math",
+      "title": "Matemática",
+      "grades": [
+        6
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/ae_mat_6.o_ano.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-math-7-d8fed454",
+      "subject": "math",
+      "title": "Matemática",
+      "grades": [
+        7
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/ae_mat_7.o_ano.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-math-8-c627df7d",
+      "subject": "math",
+      "title": "Matemática",
+      "grades": [
+        8
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/ae_mat_8.o_ano.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-math-9-316411c1",
+      "subject": "math",
+      "title": "Matemática",
+      "grades": [
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/ae_mat_9.o_ano.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-citizenship-5-6-7-8-9-c68c03f0",
+      "subject": "citizenship",
+      "title": "Cidadania e Desenvolvimento",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/cidadania-desenvolvimento.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-physical-5-9372160d",
+      "subject": "physical",
+      "title": "Educação Física",
+      "grades": [
+        5
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/5_educacao_fisica.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-physical-6-470c71be",
+      "subject": "physical",
+      "title": "Educação Física",
+      "grades": [
+        6
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/6_educacao_fisica.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-physical-7-111750fd",
+      "subject": "physical",
+      "title": "Educação Física",
+      "grades": [
+        7
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/educacao_fisica_3c_7a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-physical-8-2d9c7317",
+      "subject": "physical",
+      "title": "Educação Física",
+      "grades": [
+        8
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/educacao_fisica_3c_8a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-physical-9-29f4940e",
+      "subject": "physical",
+      "title": "Educação Física",
+      "grades": [
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/educacao_fisica_3c_9a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-english-5-d2212a23",
+      "subject": "english",
+      "title": "Inglês",
+      "grades": [
+        5
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/5_ingles.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-english-6-3bb494a4",
+      "subject": "english",
+      "title": "Inglês",
+      "grades": [
+        6
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/6_ingles.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-english-7-0a21ca37",
+      "subject": "english",
+      "title": "Inglês",
+      "grades": [
+        7
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/ingles_3c_7a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-english-8-382a704e",
+      "subject": "english",
+      "title": "Inglês",
+      "grades": [
+        8
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/ingles_3c_8a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-english-9-938dbc0b",
+      "subject": "english",
+      "title": "Inglês",
+      "grades": [
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/ingles_3c_9a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-digital-5-6d8cedb7",
+      "subject": "digital",
+      "title": "TIC",
+      "grades": [
+        5
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/5_tic.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-digital-6-e5eb681a",
+      "subject": "digital",
+      "title": "TIC",
+      "grades": [
+        6
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/6_tic_2019.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-digital-7-677adc76",
+      "subject": "digital",
+      "title": "TIC",
+      "grades": [
+        7
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/tic_3c_7a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-digital-8-7978e5a0",
+      "subject": "digital",
+      "title": "TIC",
+      "grades": [
+        8
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/tic_3c_8a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-digital-9-bf161ea2",
+      "subject": "digital",
+      "title": "TIC",
+      "grades": [
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/tic_3c_9a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-hgp-5-5277a33d",
+      "subject": "hgp",
+      "title": "História e Geografia de Portugal",
+      "grades": [
+        5
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/5_historia_e_geografia_de_portugal.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-hgp-6-1ada31fb",
+      "subject": "hgp",
+      "title": "História e Geografia de Portugal",
+      "grades": [
+        6
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/6_historia_e_geografia_de_portugal.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-science-5-728387eb",
+      "subject": "science",
+      "title": "Ciências Naturais",
+      "grades": [
+        5
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/5_ciencias_naturais.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-science-6-fe722d8f",
+      "subject": "science",
+      "title": "Ciências Naturais",
+      "grades": [
+        6
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/6_ciencias_naturais.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-science-7-525451cb",
+      "subject": "science",
+      "title": "Ciências Naturais",
+      "grades": [
+        7
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/ciencias_naturais_3c_7a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-science-8-b34b0f48",
+      "subject": "science",
+      "title": "Ciências Naturais",
+      "grades": [
+        8
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/ciencias_naturais_3c_8a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-science-9-a791bf5d",
+      "subject": "science",
+      "title": "Ciências Naturais",
+      "grades": [
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/ciencias_naturais_3c_9a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-arts-5-6-d3230f4f",
+      "subject": "arts",
+      "title": "Educação Visual",
+      "grades": [
+        5,
+        6
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/educacao_visual_2c_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-arts-7-8-9-2ba651c7",
+      "subject": "arts",
+      "title": "Educação Visual",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/educacao_visual_3c_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-technology-5-6-1bd64fb5",
+      "subject": "technology",
+      "title": "Educação Tecnológica",
+      "grades": [
+        5,
+        6
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/2c_educacao_tecnologica.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-technology-7-8-9-276123dd",
+      "subject": "technology",
+      "title": "Educação Tecnológica",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/3c_educacao_tecnologica.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-music-5-6-776b8d92",
+      "subject": "music",
+      "title": "Educação Musical",
+      "grades": [
+        5,
+        6
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/2c_educacao_musical.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-music-7-8-9-dcf8eb19",
+      "subject": "music",
+      "title": "Educação Musical",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/3c_educacao_musical.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-german-7-694749ae",
+      "subject": "german",
+      "title": "Alemão — Língua Estrangeira II",
+      "grades": [
+        7
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/alemao_3c_7a_ff.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-german-8-5a6c820d",
+      "subject": "german",
+      "title": "Alemão — Língua Estrangeira II",
+      "grades": [
+        8
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/alemao_3c_8a_ff.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-german-9-09a563e3",
+      "subject": "german",
+      "title": "Alemão — Língua Estrangeira II",
+      "grades": [
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/alemao_3c_9a_ff.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-spanish-7-7c260a3b",
+      "subject": "spanish",
+      "title": "Espanhol",
+      "grades": [
+        7
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/espanhol_3c_7a_ff.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-spanish-8-553c29ff",
+      "subject": "spanish",
+      "title": "Espanhol",
+      "grades": [
+        8
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/espanhol_3c_8a_ff.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-spanish-9-2d1041fa",
+      "subject": "spanish",
+      "title": "Espanhol",
+      "grades": [
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/espanhol_3c_9a_ff.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-french-7-3156d327",
+      "subject": "french",
+      "title": "Francês",
+      "grades": [
+        7
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/frances_3c_7a_ff.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-french-8-57a0b177",
+      "subject": "french",
+      "title": "Francês",
+      "grades": [
+        8
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/frances_3c_8a_ff.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-french-9-7c3792e9",
+      "subject": "french",
+      "title": "Francês",
+      "grades": [
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/frances_3c_9a_ff.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-history-7-a37e9b3e",
+      "subject": "history",
+      "title": "História",
+      "grades": [
+        7
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/historia_3c_7a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-history-8-c03bc352",
+      "subject": "history",
+      "title": "História",
+      "grades": [
+        8
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/historia_3c_8a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-history-9-6e0a64ac",
+      "subject": "history",
+      "title": "História",
+      "grades": [
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/historia_3c_9a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-geography-7-d611b729",
+      "subject": "geography",
+      "title": "Geografia",
+      "grades": [
+        7
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/7_geografia.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-geography-8-78582022",
+      "subject": "geography",
+      "title": "Geografia",
+      "grades": [
+        8
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/8_geografia.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-geography-9-c086734b",
+      "subject": "geography",
+      "title": "Geografia",
+      "grades": [
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/9_geografia.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-physics-7-fb65cd70",
+      "subject": "physics",
+      "title": "Físico-Química",
+      "grades": [
+        7
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/fisico-quimica_3c_7a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-physics-8-2449b8dc",
+      "subject": "physics",
+      "title": "Físico-Química",
+      "grades": [
+        8
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/fisico-quimica_3c_8a_ff.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-physics-9-73063bf0",
+      "subject": "physics",
+      "title": "Físico-Química",
+      "grades": [
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/fisico-quimica_3c_9a.pdf",
+      "optional": false,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-religions-5-dfb4b6e5",
+      "subject": "religions",
+      "title": "Educação Moral e Religiosa Católica",
+      "grades": [
+        5
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/emrc_2c_5a.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-religions-6-06c0baa5",
+      "subject": "religions",
+      "title": "Educação Moral e Religiosa Católica",
+      "grades": [
+        6
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/emrc_2c_6a.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-religions-7-6a2be8f8",
+      "subject": "religions",
+      "title": "Educação Moral e Religiosa Católica",
+      "grades": [
+        7
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/emrc_3c_7a.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-religions-8-e1c90a43",
+      "subject": "religions",
+      "title": "Educação Moral e Religiosa Católica",
+      "grades": [
+        8
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/emrc_3c_8a.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-religions-9-2498a729",
+      "subject": "religions",
+      "title": "Educação Moral e Religiosa Católica",
+      "grades": [
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/emrc_3c_9a.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-religions-5-19650817",
+      "subject": "religions",
+      "title": "Educação Moral e Religiosa Evangélica",
+      "grades": [
+        5
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/5emre.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-religions-6-b46b8ca7",
+      "subject": "religions",
+      "title": "Educação Moral e Religiosa Evangélica",
+      "grades": [
+        6
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/2_ciclo/6emre.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-religions-7-fc14a659",
+      "subject": "religions",
+      "title": "Educação Moral e Religiosa Evangélica",
+      "grades": [
+        7
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/7emre.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-religions-8-208b76ab",
+      "subject": "religions",
+      "title": "Educação Moral e Religiosa Evangélica",
+      "grades": [
+        8
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/8emre.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-religions-9-979c218f",
+      "subject": "religions",
+      "title": "Educação Moral e Religiosa Evangélica",
+      "grades": [
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/3_ciclo/9emre.pdf",
+      "optional": true,
+      "level": null,
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-plnm-a1-e78dd7f6",
+      "subject": "plnm",
+      "title": "Português Língua Não Materna — A1",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/PLNM/plnm_a1_ff.pdf",
+      "optional": true,
+      "level": "A1",
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-plnm-a2-3b36ab9a",
+      "subject": "plnm",
+      "title": "Português Língua Não Materna — A2",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/PLNM/plnm_a2_ff.pdf",
+      "optional": true,
+      "level": "A2",
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    },
+    {
+      "id": "dge-plnm-b1-faa9484d",
+      "subject": "plnm",
+      "title": "Português Língua Não Materna — B1",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://www.dge.mec.pt/sites/default/files/Curriculo/Aprendizagens_Essenciais/PLNM/plnm_b1_ff.pdf",
+      "optional": true,
+      "level": "B1",
+      "authority": "Direção-Geral da Educação",
+      "indexUrl": "https://www.dge.mec.pt/aprendizagens-essenciais-ensino-basico",
+      "indexCheckedAt": "2026-10-14",
+      "status": "listed-in-official-index",
+      "notice": "Referencial curricular; não indica o tema semanal da turma nem certifica as respostas do tutor."
+    }
+  ]
+}
