@@ -25,3 +25,4 @@ tests/artifacts/
 .nexo-build/
 src-tauri/resources/python/
 src-tauri/resources/lua-obj/
+/work/
