@@ -14,6 +14,7 @@ on:
       - tests/windows-update.mjs
       - tests/native-updater.mjs
       - tests/fixtures/updater-fixture.cpp
+      - tests/fixtures/recovery-ui-fixture.cpp
       - native/updater.cpp
       - scripts/test-without-webview.ps1
       - tests/windows-installed.mjs
