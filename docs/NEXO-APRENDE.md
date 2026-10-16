@@ -124,3 +124,6 @@ Validação: 140/140 testes sem ignorados; fluxo educativo no navegador passou; 
 
 Reforço adversarial: o modelo revisor isolado aceitou indevidamente duas de doze passagens sintéticas (objetivo curricular e tentativa de manipulação). A cadeia completa passou a recusar instruções reconhecidas antes do modelo, além da triagem dos objetivos: repetição com seis passagens úteis e seis inadequadas teve 12/12 decisões esperadas. É um ensaio pequeno com um modelo; o filtro heurístico não cobre todas as manipulações e pode recusar conteúdo legítimo. Bateria atual: 141/141 testes, sem ignorados.
 
+
+Validação Windows concluída para o código 3ff7858: https://github.com/nexofocusscripts/NexoAI/actions/runs/38951329205 — ambos os cenários passaram (WebView2 inicialmente presente e ausente). O ensaio executa instalação silenciosa e valida a interface real no primeiro arranque; não é um teste manual de todos os passos do assistente gráfico, nem valida atualização/rollback ou todas as configurações de PCs. As verificações gerais passaram em https://github.com/nexofocusscripts/NexoAI/actions/runs/38951329126 . Sem publicação de uma nova versão; fontes no ramo codex/agent-improvements.
+
