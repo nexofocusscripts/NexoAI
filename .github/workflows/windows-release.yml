@@ -10,6 +10,11 @@ on:
       - package-lock.json
       - .github/workflows/windows-release.yml
       - scripts/test-installed-windows.ps1
+      - scripts/test-update-windows.ps1
+      - tests/windows-update.mjs
+      - tests/native-updater.mjs
+      - tests/fixtures/updater-fixture.cpp
+      - native/updater.cpp
       - scripts/test-without-webview.ps1
       - tests/windows-installed.mjs
       - src-tauri/tauri.conf.json
@@ -65,6 +70,12 @@ jobs:
       - name: Instalar e validar primeiro arranque
         shell: pwsh
         run: ./scripts/test-installed-windows.ps1
+      - name: Atualizar, falhar e recuperar sem perder dados
+        if: matrix.webview == 'present' && github.event_name != 'release'
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: ./scripts/test-update-windows.ps1
       - name: Guardar resultados e capturas
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

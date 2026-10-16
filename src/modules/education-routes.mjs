@@ -3,6 +3,17 @@ export async function educationRoute(service,route,method,input={}){
  if(method!=='POST')throw Error('Operação educativa inválida.');
  const d=input;
  switch(route){
+  case '/api/education/evaluation/list':return service.evaluationList(d.token,d.profileId);
+  case '/api/education/evaluation/remove':if(d.confirmed!==true)throw Error('Confirma a remoção da avaliação.');return service.evaluationRemove(d.token,d.profileId,d.id);
+  case '/api/education/evaluation/start':if(d.confirmed!==true)throw Error('Confirma a avaliação local com perguntas fixas.');return service.evaluationStart(d.token,d.profileId);
+  case '/api/education/evaluation/get':return service.evaluationGet(d.token,d.profileId,d.id);
+  case '/api/education/evaluation/cancel':return service.evaluationCancel(d.token,d.profileId,d.id);
+  case '/api/education/evaluation/review':return service.evaluationReview(d.token,d.profileId,d.id,d);
+  case '/api/education/knowledge/list':return service.knowledgeList(d.token,d.profileId);
+  case '/api/education/knowledge/prepare':return service.knowledgePrepare(d.token,d.profileId,d.documentId);
+  case '/api/education/knowledge/sync':if(d.confirmed!==true)throw Error('Confirma o pedido exato à fonte.');return service.knowledgeSync(d.token,d.profileId,d.id);
+  case '/api/education/knowledge/enable':if(d.enabled===true&&d.confirmed!==true)throw Error('Confirma a revisão desta cópia explicativa.');return service.knowledgeEnable(d.token,d.profileId,d.documentId,d.enabled===true);
+  case '/api/education/knowledge/remove':if(d.confirmed!==true)throw Error('Confirma a remoção da cópia para todos os perfis.');return service.knowledgeRemove(d.token,d.documentId);
   case '/api/education/setup':return service.setup(d.pin);
   case '/api/education/unlock':return service.unlock(d.pin);
   case '/api/education/recover':return service.recover(d.code,d.pin);

@@ -13,8 +13,12 @@ export function educationEvidence({settings,fetcher=fetch,now=Date.now}){const r
 };}
 export function verifiedQuotes(raw,sources,{allowPartial=false}={}){
  let value;try{if(typeof raw!=='string'||raw.length>18000)throw Error('Formato inválido');let text=raw.trim();const fence=text.match(/^```(?:json)?\s*\n([\s\S]*?)\n```$/i);if(fence)text=fence[1];value=JSON.parse(text);}catch{throw Error('O modelo não apresentou uma seleção de fontes verificável.');}
+ if(Array.isArray(value.selections)){
+  if(value.quotes!==undefined||value.selections.length>3)throw Error('Seleção de fontes inválida.');const selected=[];let rejected=0;
+  for(const item of value.selections){const source=sources.find(s=>s.id===item?.sourceId),index=item?.paragraphIndex,text=Number.isInteger(index)&&index>=0?source?.paragraphs[index]:null;if(typeof text==='string'&&text.length>=35&&text.length<=2500&&!educationSafety(text)){if(!selected.some(q=>q.sourceId===source.id&&q.text===text))selected.push({text,sourceId:source.id,host:source.host,url:source.url,context:text});}else rejected++;}
+  if(rejected&&(!allowPartial||!selected.length))throw Error('A seleção inclui passagens inexistentes ou não utilizáveis.');selected.rejectedCount=rejected;return selected;
+ }
  if(!Array.isArray(value.quotes)||value.quotes.length>3)throw Error('Seleção de fontes inválida.');const quotes=[];let rejectedCount=0;
  for(const q of value.quotes){const source=sources.find(s=>s.id===q?.sourceId);const valid=source&&typeof q.text==='string'&&q.text.length>=35&&q.text.length<=400&&!educationSafety(q.text)&&source.paragraphs.some(p=>{const start=p.indexOf(q.text);if(start<0)return false;const before=p.slice(0,start).trimEnd(),after=p.slice(start+q.text.length).trimStart();return (!before||/[.!?]$/.test(before))&&(!after||/[.!?]$/.test(q.text));});if(valid)quotes.push({text:q.text,sourceId:source.id,host:source.host,url:source.url,context:source.paragraphs.find(p=>p.includes(q.text))});else rejectedCount++;}
  if(rejectedCount&&(!allowPartial||!quotes.length))throw Error('A resposta inclui texto que não consta da fonte ou não pode ser apresentado.');quotes.rejectedCount=rejectedCount;return quotes;
 }
-
