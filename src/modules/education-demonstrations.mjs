@@ -1,0 +1,15 @@
+const gcd=(a,b)=>b?gcd(b,a%b):a<0n?-a:a;
+const rational=(n,d)=>{if(d<0n){n=-n;d=-d;}const g=gcd(n,d)||1n;return d/g===1n?String(n/g):String(n/g)+'/'+String(d/g);};
+const response=(steps,result,notice)=>({kind:'checked-calculation',generated:false,basis:'deterministic-mathematics',result,steps,message:'Demonstração passo a passo\n'+steps.map((s,i)=>(i+1)+'. '+s).join('\n')+'\n\nConclusão: '+result,illustration:{kind:'calculation',steps,result},notice});
+export function schoolDemonstration(question,grade){
+ if(typeof question!=='string'||question.length>240)return null;
+ const text=question.trim().normalize('NFD').replace(/\p{M}/gu,'').toLowerCase().replace(/[−–]/g,'-').replace(/\s+/g,' ');
+ const fractions=text.match(/^(?:(?:porque(?: e que)?|por que|explica porque|mostra porque|como demonstrar que)\s+)?(?:as? fracoes?\s+)?([+-]?\d{1,6})\s*\/\s*([+-]?\d{1,6})\s+(?:e|=)\s+([+-]?\d{1,6})\s*\/\s*([+-]?\d{1,6})\s+(?:sao\s+)?(?:equivalentes?|iguais)[?.]?$/);
+ if(fractions){const [a,b,c,d]=fractions.slice(1).map(BigInt);if(b===0n||d===0n)return response(['Uma fração numérica exige denominador diferente de zero.','Não se pode testar equivalência como se a divisão por zero fosse definida.'],'Comparação indefinida','Operações verificadas pela aplicação; não há uma divisão por zero definida.');const left=a*d,right=c*b,same=left===right;return response(['Considera a mesma unidade para comparar '+a+'/'+b+' e '+c+'/'+d+'.','Com denominadores não nulos, compara os produtos cruzados: '+a+' × ('+d+') = '+left+' e '+c+' × ('+b+') = '+right+'.',same?'Os produtos são iguais; as frações representam o mesmo número racional.':'Os produtos são diferentes; as frações não representam o mesmo número racional.','Formas reduzidas: '+rational(a,b)+' e '+rational(c,d)+'.'],same?'Frações equivalentes':'Frações não equivalentes','Comparação exata com inteiros, sem estimativas de um modelo. O raciocínio considera a mesma unidade.');}
+ if(grade<7)return null;
+ const equation=text.match(/^(?:(?:resolve|resolver|explica|mostra os passos de)(?: a equacao)?\s+)?([+-]?\d{0,6})x\s*(?:([+-])\s*(\d{1,6}))?\s*=\s*([+-]?\d{1,6})[?.]?$/);
+ if(!equation)return null;
+ const a=BigInt(equation[1]===''||equation[1]==='+'?'1':equation[1]==='-'?'-1':equation[1]),b=equation[3]?BigInt(equation[3])*(equation[2]==='-'?-1n:1n):0n,c=BigInt(equation[4]);
+ if(a===0n)return response(['O coeficiente de x é zero: o primeiro membro vale '+b+'.','Compara os dois membros: '+b+' e '+c+'.'],b===c?'Todos os números reais são soluções':'Não há solução real','Não se divide por zero. A conclusão depende de os termos constantes serem iguais.');
+ const n=c-b,x=rational(n,a);return response(['A equação tem a forma ax + b = c, com a = '+a+', b = '+b+' e c = '+c+'.','Subtrai b aos dois membros: '+a+'x = '+c+' − ('+b+') = '+n+'.','Divide ambos os membros por '+a+', que não é zero: x = '+x+'.','Verificação exata: a × ((c − b)/a) + b = (c − b) + b = c = '+c+'.'],'x = '+x,'Transformações e resultado calculados exatamente pela aplicação. Apenas equações desta forma simples são reconhecidas.');
+}

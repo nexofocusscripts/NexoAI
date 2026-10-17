@@ -1,14 +1,1036 @@
 {
- "version":1,
- "notice":"Catálogo inicial de explicações, não cobertura completa do currículo. Adequação por ano é uma indicação editorial a rever pelo responsável. Apenas endereços e metadados são distribuídos; nenhum conteúdo externo é descarregado sem autorização.",
- "documents":[
-  {"id":"learn-fractions","title":"Frações equivalentes e irredutíveis","subject":"math","grades":[5,6,7,8,9],"url":"https://ensina.rtp.pt/artigo/fracoes-equivalentes-e-irredutiveis/","publisher":"RTP Ensina / Escola Mágica","language":"pt","type":"html","tags":"frações equivalentes irredutíveis quantidade multiplicação divisão","levelNotice":"Revisão de conhecimentos prévios; o editor indica 4.º ano."},
-  {"id":"learn-evaporation","title":"Porque é que a água evapora?","subject":"science","grades":[5,6,7,8,9],"url":"https://ensina.rtp.pt/artigo/porque-e-que-a-agua-evapora/","publisher":"RTP Ensina","language":"pt","type":"html","tags":"evaporação água energia estado líquido gasoso nuvens chuva","levelNotice":"O editor indica 1.º e 2.º ciclos; pode servir de revisão."},
-  {"id":"learn-weather-climate","title":"Diferença entre tempo e clima","subject":"geography","grades":[5,6,7,8,9],"url":"https://www.ipma.pt/pt/educativa/faq/climatologia/faq_0001.html","publisher":"IPMA","language":"pt","type":"html","tags":"tempo clima temperatura vento pressão atmosférica escalas temporais","levelNotice":"Informação científica; linguagem técnica requer acompanhamento nos anos iniciais."},
-  {"id":"learn-mass-weight","title":"Massa, peso e gravidade","subject":"physics","grades":[7,8,9],"url":"https://spaceplace.nasa.gov/planets-weight/en/","publisher":"NASA Space Place","language":"en","type":"html","tags":"mass weight gravity matter planets massa peso gravidade","levelNotice":"Original em inglês. Tradução gerada exige revisão; a aplicação conserva a citação original."},
-  {"id":"learn-present-simple","title":"Present simple — explicação gramatical","subject":"english","grades":[5,6,7,8,9],"url":"https://learnenglishteens.britishcouncil.org/sites/teens/files/present_simple.pdf","publisher":"British Council","language":"en","type":"pdf","tags":"present simple third person singular verbs forms questions negatives he she it","levelNotice":"Inglês A1/A2. Documento do editor; rever adequação ao nível linguístico."},
-  {"id":"learn-bullying","title":"Age. Fala. Muda. A tua voz contra o Bullying","subject":"citizenship","grades":[5,6,7,8,9],"url":"https://seguranet.pt/campanha-age-fala-muda-tua-voz-contra-o-bullying","publisher":"SeguraNet","language":"pt","type":"html","tags":"bullying ciberbullying cyberbullying ajuda vítima humilhação agressão","levelNotice":"Recurso de sensibilização; não substitui apoio de um adulto nem resposta a uma emergência."},
-  {"id":"learn-portugal-borders","title":"O tratado de Alcanizes","subject":"history","grades":[7,8,9],"url":"https://ensina.rtp.pt/artigo/o-tratado-de-alcanizes/","publisher":"RTP Ensina","language":"pt","type":"html","tags":"tratado Alcanizes fronteiras Portugal Castela Dinis 1297","levelNotice":"O editor indica 3.º ciclo. Distinguir fronteiras históricas e questões territoriais atuais."},
-  {"id":"learn-oral-tradition","title":"O Língua, contador de histórias","subject":"culture","grades":[7,8,9],"url":"https://ensina.rtp.pt/artigo/o-lingua-contador-de-historias/","publisher":"RTP Ensina","language":"pt","type":"html","tags":"tradição oral conto tradicional narrador histórias autor variantes cultura portuguesa","levelNotice":"O editor indica 3.º ciclo e secundário; rever o texto para o jovem."}
- ]
+  "version": 2,
+  "notice": "Catálogo alargado de referências explicativas. As indicações de ano são editoriais e a cobertura continua parcial. Só os metadados são distribuídos. Cada consulta e cada cópia para o perfil exigem autorização e revisão separadas; uma referência institucional não certifica a resposta.",
+  "documents": [
+    {
+      "id": "learn-fractions",
+      "title": "Frações equivalentes e irredutíveis",
+      "subject": "math",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/fracoes-equivalentes-e-irredutiveis/",
+      "publisher": "RTP Ensina / Escola Mágica",
+      "language": "pt",
+      "type": "html",
+      "tags": "frações equivalentes irredutíveis quantidade multiplicação divisão",
+      "levelNotice": "Revisão de conhecimentos prévios; o editor indica 4.º ano.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-evaporation",
+      "title": "Porque é que a água evapora?",
+      "subject": "science",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/porque-e-que-a-agua-evapora/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "evaporação água energia estado líquido gasoso nuvens chuva",
+      "levelNotice": "O editor indica 1.º e 2.º ciclos; pode servir de revisão.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-weather-climate",
+      "title": "Diferença entre tempo e clima",
+      "subject": "geography",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://www.ipma.pt/pt/educativa/faq/climatologia/faq_0001.html",
+      "publisher": "IPMA",
+      "language": "pt",
+      "type": "html",
+      "tags": "tempo clima temperatura vento pressão atmosférica escalas temporais",
+      "levelNotice": "Informação científica; linguagem técnica requer acompanhamento nos anos iniciais.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-mass-weight",
+      "title": "Massa, peso e gravidade",
+      "subject": "physics",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://spaceplace.nasa.gov/planets-weight/en/",
+      "publisher": "NASA Space Place",
+      "language": "en",
+      "type": "html",
+      "tags": "mass weight gravity matter planets massa peso gravidade",
+      "levelNotice": "Original em inglês. Tradução gerada exige revisão; a aplicação conserva a citação original.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-present-simple",
+      "title": "Present simple — explicação gramatical",
+      "subject": "english",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://learnenglishteens.britishcouncil.org/sites/teens/files/present_simple.pdf",
+      "publisher": "British Council",
+      "language": "en",
+      "type": "pdf",
+      "tags": "present simple third person singular verbs forms questions negatives he she it",
+      "levelNotice": "Inglês A1/A2. Documento do editor; rever adequação ao nível linguístico.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "unavailable",
+        "reason": "Sem resposta utilizável dentro dos limites de acesso deste ambiente"
+      }
+    },
+    {
+      "id": "learn-bullying",
+      "title": "Age. Fala. Muda. A tua voz contra o Bullying",
+      "subject": "citizenship",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://seguranet.pt/campanha-age-fala-muda-tua-voz-contra-o-bullying",
+      "publisher": "SeguraNet",
+      "language": "pt",
+      "type": "html",
+      "tags": "bullying ciberbullying cyberbullying ajuda vítima humilhação agressão",
+      "levelNotice": "Recurso de sensibilização; não substitui apoio de um adulto nem resposta a uma emergência.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-portugal-borders",
+      "title": "O tratado de Alcanizes",
+      "subject": "history",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/o-tratado-de-alcanizes/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "tratado Alcanizes fronteiras Portugal Castela Dinis 1297",
+      "levelNotice": "O editor indica 3.º ciclo. Distinguir fronteiras históricas e questões territoriais atuais.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-oral-tradition",
+      "title": "O Língua, contador de histórias",
+      "subject": "culture",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/o-lingua-contador-de-historias/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "tradição oral conto tradicional narrador histórias autor variantes cultura portuguesa",
+      "levelNotice": "O editor indica 3.º ciclo e secundário; rever o texto para o jovem.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-pi",
+      "title": "O que é o número Pi?",
+      "subject": "math",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/o-que-e-o-numero-pi/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "pi círculo razão perímetro diâmetro",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-perimeter-circle",
+      "title": "Perímetro de um círculo",
+      "subject": "math",
+      "grades": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/perimetro-de-um-circulo/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "perímetro círculo raio diâmetro pi comprimento",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-area-decomposition",
+      "title": "Calcular áreas por decomposição",
+      "subject": "math",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/calcular-areas-por-decomposicao/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "área decomposição figuras retângulo triângulo",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-area-circle",
+      "title": "Área do círculo",
+      "subject": "math",
+      "grades": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/area-do-circulo-matematica-6-o-ano/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "área círculo raio pi quadrado",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-pythagoras",
+      "title": "Teorema de Pitágoras",
+      "subject": "math",
+      "grades": [
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/o-teorema-de-pitagoras/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "Pitágoras hipotenusa catetos triângulo retângulo",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-proportionality",
+      "title": "Constante de proporcionalidade",
+      "subject": "math",
+      "grades": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/a-constante-de-proporcionalidade/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "proporcionalidade constante razão proporcional direta",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-syntax",
+      "title": "Funções sintáticas",
+      "subject": "portuguese",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/explicador/as-funcoes-sintaticas-ou-relacoes-gramaticais/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "sujeito predicado complemento sintaxe verbo frase",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-pronouns",
+      "title": "Colocação dos pronomes pessoais",
+      "subject": "portuguese",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/explicador/colocacao-dos-pronomes-pessoais/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "pronome pronomes próclise ênclise mesóclise verbo",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-complex-sentence",
+      "title": "Orações coordenadas e subordinadas",
+      "subject": "portuguese",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/explicador/a-frase-complexa-oracoes-coordenadas-e-subordinadas/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "oração orações coordenação subordinação frase complexa",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-word-classes",
+      "title": "Palavras em várias classes gramaticais",
+      "subject": "portuguese",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/explicador/palavras-que-pertencem-a-varias-classes-gramaticais/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "palavra classe advérbio pronome determinante preposição contexto",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-plant-structure",
+      "title": "Como são constituídas as plantas",
+      "subject": "science",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/plantas-como-sao-constituidas/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "plantas raiz caule folhas flor estrutura",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-ecosystem-matter",
+      "title": "Ciclo de matéria nos ecossistemas",
+      "subject": "science",
+      "grades": [
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/ciclo-de-materia-nos-ecosssistemas/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "ecossistema matéria decompositores produtores consumidores ciclo",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-plankton",
+      "title": "Fitoplâncton",
+      "subject": "science",
+      "grades": [
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/fitoplancton-o-gigante-invisivel/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "fitoplâncton fotossíntese oceano cadeia alimentar",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-map-elements",
+      "title": "Elementos dos mapas",
+      "subject": "geography",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/cartografia-elementos-dos-mapas/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "mapa legenda escala orientação título cartografia",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-coordinates",
+      "title": "Latitude e longitude",
+      "subject": "geography",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/visiokids-gps-e-coordenadas/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "latitude longitude coordenadas equador meridiano localização",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-representation",
+      "title": "Representação da superfície terrestre",
+      "subject": "geography",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/explicador/representacao-da-superficie-terrestre/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "mapa globo superfície representação projeção escala",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-landscape",
+      "title": "Paisagem",
+      "subject": "geography",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/explicador/paisagem-1-1/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "paisagem elementos naturais humanos observação",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-relief",
+      "title": "Relevo",
+      "subject": "geography",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/explicador/relevo/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "relevo altitude planalto planície montanha vale",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-population",
+      "title": "Concentrações humanas",
+      "subject": "geography",
+      "grades": [
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/explicador/concentracoes-humanas/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "população concentração distribuição densidade humana",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-iberian-relief",
+      "title": "Relevo da Península Ibérica",
+      "subject": "hgp",
+      "grades": [
+        5,
+        6
+      ],
+      "url": "https://ensina.rtp.pt/artigo/o-relevo-na-peninsula-iberica/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "relevo Península Ibérica montanha planície altitude",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-crisis-1383",
+      "title": "Crise de 1383–1385",
+      "subject": "hgp",
+      "grades": [
+        5,
+        6
+      ],
+      "url": "https://ensina.rtp.pt/artigo/a-crise-de-1383-1385/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "crise 1383 1385 João sucessão Portugal Castela",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-aljubarrota",
+      "title": "Batalha de Aljubarrota",
+      "subject": "hgp",
+      "grades": [
+        5,
+        6
+      ],
+      "url": "https://ensina.rtp.pt/artigo/batalha-de-alljubarrota-documentario/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "Aljubarrota batalha 1385 independência Portugal",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-liberals",
+      "title": "Guerra civil entre liberais e absolutistas",
+      "subject": "history",
+      "grades": [
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/guerra-civil-liberais-absolutistas/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "liberalismo absolutismo guerra civil Miguel Pedro",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-enlightenment",
+      "title": "Iluminismo: propostas políticas e sociais",
+      "subject": "history",
+      "grades": [
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/explicador/propostas-do-iluminismo-para-um-novo-regime-politico-e-social/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "Iluminismo razão liberdade regime sociedade poder",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-april-history",
+      "title": "25 de Abril e processo revolucionário",
+      "subject": "history",
+      "grades": [
+        9
+      ],
+      "url": "https://ensina.rtp.pt/explicador/o-25-de-abril-de-1974-e-o-processo-revolucionario/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "25 Abril 1974 revolução ditadura democracia processo",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-april-school",
+      "title": "O que aconteceu no 25 de Abril?",
+      "subject": "hgp",
+      "grades": [
+        6
+      ],
+      "url": "https://ensina.rtp.pt/artigo/o-que-aconteceu-no-dia-25-de-abril-de-1974/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "25 Abril 1974 ditadura democracia liberdade",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-energy",
+      "title": "As origens da energia",
+      "subject": "physics",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/as-origens-da-energia-num-minuto/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "energia fontes renovável não renovável transformações",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-lighting",
+      "title": "Da luz do fogo à iluminação elétrica",
+      "subject": "physics",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/da-luz-do-fogo-a-iluminacao-eletrica/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "luz iluminação eletricidade fogo energia",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-laser",
+      "title": "O laser",
+      "subject": "physics",
+      "grades": [
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/luz-bem-arrumada/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "laser luz onda radiação propriedades",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-music-concept",
+      "title": "O que é a música?",
+      "subject": "music",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/o-que-e-a-musica/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "música som ritmo melodia instrumento",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-notes",
+      "title": "Dó ré mi",
+      "subject": "music",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/do-re-mi/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "música notas escala som melodia",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-technology",
+      "title": "Computadores e tecnologia",
+      "subject": "digital",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/visiokids-computadores-e-tecnologia/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "computador tecnologia informação digital",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-mp3",
+      "title": "Como funciona a música em MP3?",
+      "subject": "digital",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/visiokids-musica/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "MP3 som música digital compressão formato",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-kandinsky",
+      "title": "Cor e som: observar Kandinsky",
+      "subject": "arts",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://ensina.rtp.pt/artigo/duarte-que-som-tem-este-quadro-de-kandinsky/",
+      "publisher": "RTP Ensina",
+      "language": "pt",
+      "type": "html",
+      "tags": "Kandinsky arte cor forma som pintura",
+      "levelNotice": "Anos sugeridos editorialmente para consulta acompanhada ou revisão. Conferir o nível indicado pelo editor e o texto antes de autorizar. Vídeos e áudio externos não são carregados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "extracted"
+      }
+    },
+    {
+      "id": "learn-present-html",
+      "title": "Present simple",
+      "subject": "english",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/present-simple",
+      "publisher": "British Council",
+      "language": "en",
+      "type": "html",
+      "tags": "Present simple grammar verbs English inglês gramática pergunta presente passado comparativo",
+      "levelNotice": "Texto original em inglês; adequação depende também do nível linguístico. Conteúdo da página e comentários devem ser revistos pelo responsável.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "unavailable",
+        "reason": "Sem resposta utilizável dentro dos limites de acesso deste ambiente"
+      }
+    },
+    {
+      "id": "learn-be-html",
+      "title": "Present simple: be",
+      "subject": "english",
+      "grades": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/present-simple-be",
+      "publisher": "British Council",
+      "language": "en",
+      "type": "html",
+      "tags": "Present simple: be grammar verbs English inglês gramática pergunta presente passado comparativo",
+      "levelNotice": "Texto original em inglês; adequação depende também do nível linguístico. Conteúdo da página e comentários devem ser revistos pelo responsável.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "unavailable",
+        "reason": "Sem resposta utilizável dentro dos limites de acesso deste ambiente"
+      }
+    },
+    {
+      "id": "learn-past-html",
+      "title": "Past simple",
+      "subject": "english",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/past-simple",
+      "publisher": "British Council",
+      "language": "en",
+      "type": "html",
+      "tags": "Past simple grammar verbs English inglês gramática pergunta presente passado comparativo",
+      "levelNotice": "Texto original em inglês; adequação depende também do nível linguístico. Conteúdo da página e comentários devem ser revistos pelo responsável.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "unavailable",
+        "reason": "Sem resposta utilizável dentro dos limites de acesso deste ambiente"
+      }
+    },
+    {
+      "id": "learn-past-continuous",
+      "title": "Past continuous and past simple",
+      "subject": "english",
+      "grades": [
+        8,
+        9
+      ],
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/past-continuous-past-simple",
+      "publisher": "British Council",
+      "language": "en",
+      "type": "html",
+      "tags": "Past continuous and past simple grammar verbs English inglês gramática pergunta presente passado comparativo",
+      "levelNotice": "Texto original em inglês; adequação depende também do nível linguístico. Conteúdo da página e comentários devem ser revistos pelo responsável.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "unavailable",
+        "reason": "Sem resposta utilizável dentro dos limites de acesso deste ambiente"
+      }
+    },
+    {
+      "id": "learn-comparatives",
+      "title": "Comparative and superlative adjectives",
+      "subject": "english",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/comparative-superlative-adjectives",
+      "publisher": "British Council",
+      "language": "en",
+      "type": "html",
+      "tags": "Comparative and superlative adjectives grammar verbs English inglês gramática pergunta presente passado comparativo",
+      "levelNotice": "Texto original em inglês; adequação depende também do nível linguístico. Conteúdo da página e comentários devem ser revistos pelo responsável.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "unavailable",
+        "reason": "Sem resposta utilizável dentro dos limites de acesso deste ambiente"
+      }
+    },
+    {
+      "id": "learn-questions",
+      "title": "Questions and negatives",
+      "subject": "english",
+      "grades": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/questions-negatives",
+      "publisher": "British Council",
+      "language": "en",
+      "type": "html",
+      "tags": "Questions and negatives grammar verbs English inglês gramática pergunta presente passado comparativo",
+      "levelNotice": "Texto original em inglês; adequação depende também do nível linguístico. Conteúdo da página e comentários devem ser revistos pelo responsável.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "unavailable",
+        "reason": "Sem resposta utilizável dentro dos limites de acesso deste ambiente"
+      }
+    },
+    {
+      "id": "learn-french-articles-source",
+      "title": "Francês: artigos definidos e indefinidos",
+      "subject": "french",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://apprendre.tv5monde.com/pt-pt/aides/gramatica-o-presentativo-os-artigos-definidos-e-indefinidos-0",
+      "publisher": "TV5MONDE",
+      "language": "pt",
+      "type": "html",
+      "tags": "français francês article articles un une des le la présent indicatif verbe verbos",
+      "levelNotice": "Referência linguística do editor. Rever nível e vocabulário para o perfil; os exercícios e vídeos externos não são executados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "unavailable",
+        "reason": "Acesso HTTP 403 neste ambiente"
+      }
+    },
+    {
+      "id": "learn-french-present-source",
+      "title": "Francês: presente do indicativo",
+      "subject": "french",
+      "grades": [
+        7,
+        8,
+        9
+      ],
+      "url": "https://apprendre.tv5monde.com/fr/aides/grammaire-le-present-de-lindicatif-0",
+      "publisher": "TV5MONDE",
+      "language": "fr",
+      "type": "html",
+      "tags": "français francês article articles un une des le la présent indicatif verbe verbos",
+      "levelNotice": "Referência linguística do editor. Rever nível e vocabulário para o perfil; os exercícios e vídeos externos não são executados.",
+      "technicalCheck": {
+        "date": "2026-10-17",
+        "status": "unavailable",
+        "reason": "Acesso HTTP 403 neste ambiente"
+      }
+    }
+  ]
 }

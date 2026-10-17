@@ -12,7 +12,7 @@ export async function educationRoute(service,route,method,input={}){
   case '/api/education/knowledge/list':return service.knowledgeList(d.token,d.profileId);
   case '/api/education/knowledge/prepare':return service.knowledgePrepare(d.token,d.profileId,d.documentId);
   case '/api/education/knowledge/sync':if(d.confirmed!==true)throw Error('Confirma o pedido exato à fonte.');return service.knowledgeSync(d.token,d.profileId,d.id);
-  case '/api/education/knowledge/enable':if(d.enabled===true&&d.confirmed!==true)throw Error('Confirma a revisão desta cópia explicativa.');return service.knowledgeEnable(d.token,d.profileId,d.documentId,d.enabled===true);
+  case '/api/education/knowledge/enable':if(d.enabled===true&&d.confirmed!==true)throw Error('Confirma a revisão desta cópia explicativa.');if(d.enabled===true&&!/^[a-f0-9]{64}$/.test(d.textSha256||''))throw Error('Confere a versão exata do texto antes de autorizar.');return service.knowledgeEnable(d.token,d.profileId,d.documentId,d.enabled===true,d.textSha256);
   case '/api/education/knowledge/remove':if(d.confirmed!==true)throw Error('Confirma a remoção da cópia para todos os perfis.');return service.knowledgeRemove(d.token,d.documentId);
   case '/api/education/setup':return service.setup(d.pin);
   case '/api/education/unlock':return service.unlock(d.pin);
