@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-17",
+  "codeCommit": "b9ec043",
+  "content": {
+    "guidedOriginalUnitsAdded": 71,
+    "topicsTotal": 242,
+    "subjectAreas": 22,
+    "independentPedagogicalReview": "pending"
+  },
+  "sources": {
+    "metadataReferences": 50,
+    "technicalExtractions": 41,
+    "unavailable": 9,
+    "externalTextsDistributed": false
+  },
+  "tests": {
+    "unitAndIntegration": {
+      "passed": 160,
+      "failed": 0,
+      "skipped": 0
+    },
+    "browser": "passed; includes worked lesson, accent-insensitive search and mocked desktop batch consent",
+    "windows": {
+      "status": "passed",
+      "run": "https://github.com/nexofocusscripts/NexoAI/actions/runs/39074992801",
+      "contributions": "https://github.com/nexofocusscripts/NexoAI/actions/runs/39074992821"
+    }
+  },
+  "syntheticBackendSoak": {
+    "ok": true,
+    "scope": "Synthetic HTTP/backend soak, not a child study, GPU/model endurance test or physical power loss",
+    "minutesRequested": 20,
+    "elapsedMs": 1200831,
+    "cycles": 1032,
+    "requests": 12447,
+    "restarts": 9,
+    "providerCalls": 0,
+    "controllerRss": 72695808,
+    "completedAt": "2026-10-17T22:37:30.899Z",
+    "limits": "No real microphone, camera, model inference, days-long use, manual installer wizard or physical power cut."
+  },
+  "models": [
+    {
+      "model": "Qwen2.5-Coder 7b Q4_K_M",
+      "gpuLayers": 99,
+      "total": 38,
+      "counts": {
+        "insufficient-evidence": 27,
+        "source-excerpts": 11
+      },
+      "controlsPresented": 10,
+      "controlsTotal": 15,
+      "presentedMedianMs": 2097,
+      "elapsedMs": 69575,
+      "limits": "Different GPU offload configurations. No pedagogical accuracy measurement."
+    },
+    {
+      "model": "Qwen2.5-Coder 14b Q4_K_M",
+      "gpuLayers": 40,
+      "total": 38,
+      "counts": {
+        "insufficient-evidence": 22,
+        "source-excerpts": 16
+      },
+      "controlsPresented": 15,
+      "controlsTotal": 15,
+      "presentedMedianMs": 9109,
+      "elapsedMs": 191484,
+      "limits": "Different GPU offload configurations. No pedagogical accuracy measurement."
+    }
+  ],
+  "limits": [
+    "Teacher review still pending",
+    "Speech recognition pt-PT unavailable on this PC",
+    "No real children, microphone, camera or handwriting validation",
+    "No days-long usage or physical power cut",
+    "Model configurations differ; excerpt counts are not accuracy",
+    "No public release created; Authenticode remains on hold"
+  ]
+}
